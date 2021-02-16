@@ -1,0 +1,1309 @@
+object Report: TppReport
+  AutoStop = False
+  DataPipeline = dmPipelines.Kurse
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Liste_aller_Kurse-St'#228'rken-SII.rtm'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 12350
+  PrinterSetup.mmMarginLeft = 15000
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 10350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.FileName =
+    'E:\ADV_N\SchILD-NRW\SchILD-Reports\A_Abitur\2.3_''#220''bersichten_Ergebnislisten\''#220''bersicht  Abiturf''#228''cher und Sch''#252''lerzahl.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  CachePages = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  LanguageID = 'Default'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = []
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextSearchSettings.DefaultString = '<Suchtext>'
+  TextSearchSettings.Enabled = False
+  Left = 328
+  Top = 232
+  Version = '12.01'
+  mmColumnWidth = 0
+  DataPipelineName = 'Kurse'
+  object ppHeaderBand2: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 6350
+    mmPrintPosition = 0
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Jahr'
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Kurse'
+      mmHeight = 5165
+      mmLeft = 14552
+      mmTop = 0
+      mmWidth = 9483
+      BandType = 0
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Kurse'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 529
+      mmTop = 0
+      mmWidth = 11906
+      BandType = 0
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 131234
+      mmTop = 529
+      mmWidth = 17463
+      BandType = 0
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'ASDJahrgang'
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Kurse'
+      mmHeight = 4233
+      mmLeft = 62706
+      mmTop = 529
+      mmWidth = 3895
+      BandType = 0
+    end
+    object ppLabel23: TppLabel
+      UserName = 'Label23'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Stufe:'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4064
+      mmLeft = 51594
+      mmTop = 794
+      mmWidth = 9398
+      BandType = 0
+    end
+  end
+  object ppDetailBand2: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background1.Gradient.EndColor = clWhite
+    Background1.Gradient.StartColor = clWhite
+    Background1.Gradient.Style = gsNone
+    Background2.Brush.Style = bsClear
+    Background2.Gradient.EndColor = clWhite
+    Background2.Gradient.StartColor = clWhite
+    Background2.Gradient.Style = gsNone
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plKursSchueler'
+      mmHeight = 3704
+      mmLeft = 7408
+      mmTop = 0
+      mmWidth = 147638
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = dmPipelines.plKursSchueler
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Liste_aller_Kurse-St'#228'rken-SII.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 12350
+        PrinterSetup.mmMarginLeft = 15000
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 10350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '12.01'
+        mmColumnWidth = 0
+        DataPipelineName = 'plKursSchueler'
+        object ppDetailBand3: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background1.Gradient.EndColor = clWhite
+          Background1.Gradient.StartColor = clWhite
+          Background1.Gradient.Style = gsNone
+          Background2.Brush.Style = bsClear
+          Background2.Gradient.EndColor = clWhite
+          Background2.Gradient.StartColor = clWhite
+          Background2.Gradient.Style = gsNone
+          PrintHeight = phDynamic
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule1: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+            44657461696C4265666F72655072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F757263650CEE01000070726F63656475726520
+            44657461696C4265666F72655072696E743B0D0A20564152206C4172743A2053
+            7472696E673B0D0A626567696E0D0A2020696620284B75727353636875656C65
+            725B2747657363686C65636874275D203D203329200D0A20202020207468656E
+            207A6D203A3D207A6D202B20310D0A2020202020656C7365207A77203A3D207A
+            77202B20313B0D0A20206C4172743A3D204B75727353636875656C65725B274B
+            757273617274275D3B2020200D0A2020696620286C417274203D2027474B5327
+            29206F7220286C417274203D20274C4B312729206F7220286C417274203D2027
+            4C4B322729200D0A20202020207468656E207A736368723A3D207A7363687220
+            2B20310D0A2020202020656C7365206966206C417274203D202741423327200D
+            0A2020202020207468656E207A616269333A3D207A61626933202B20310D0A20
+            2020202020656C7365206966206C417274203D202741423427200D0A20202020
+            2020207468656E207A616269343A3D207A6162693420202B20310D0A20202020
+            202020656C7365207A6D646C203A3D207A6D646C202B20313B0D0A2020696620
+            4B75727353636875656C65725B27537461747573275D203D2036207468656E20
+            7A4B6F6F703A3D207A4B6F6F70202B20313B20202020200D0A656E643B202020
+            0D0A0D0A0D436F6D706F6E656E744E616D65060644657461696C094576656E74
+            4E616D65060B4265666F72655072696E74074576656E74494402180000}
+        end
+      end
+    end
+    object rbTableGrid2: TrbTableGrid
+      UserName = 'TableGrid2'
+      OutlineStyle = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      ShowCoordinates = False
+      ShiftWithParent = False
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 172509
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      CellsData = (
+        1
+        13
+        36
+        65
+        55
+        40
+        55
+        50
+        50
+        50
+        50
+        50
+        50
+        50
+        50
+        15
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67305475)
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'KurzBez'
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Kurse'
+      mmHeight = 3302
+      mmLeft = 28766
+      mmTop = 0
+      mmWidth = 10583
+      BandType = 4
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'LehrerKrz'
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Kurse'
+      mmHeight = 3302
+      mmLeft = 55298
+      mmTop = 0
+      mmWidth = 8297
+      BandType = 4
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'Kurse'
+      mmHeight = 3175
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 6085
+      BandType = 4
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label1'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 69056
+      mmTop = 0
+      mmWidth = 8043
+      BandType = 4
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label2'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 82021
+      mmTop = 0
+      mmWidth = 8043
+      BandType = 4
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label11'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label11'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 160867
+      mmTop = 0
+      mmWidth = 9525
+      BandType = 4
+    end
+    object ppLabel17: TppLabel
+      UserName = 'Label17'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label17'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 107950
+      mmTop = 0
+      mmWidth = 9525
+      BandType = 4
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label16'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label16'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 134144
+      mmTop = 0
+      mmWidth = 9525
+      BandType = 4
+    end
+    object ppLabel20: TppLabel
+      UserName = 'Label20'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label20'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 120915
+      mmTop = 0
+      mmWidth = 9525
+      BandType = 4
+    end
+    object ppLabel21: TppLabel
+      UserName = 'Label21'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label21'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 147638
+      mmTop = 0
+      mmWidth = 9567
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'KursartAllg'
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Kurse'
+      mmHeight = 3895
+      mmLeft = 13494
+      mmTop = 0
+      mmWidth = 4233
+      BandType = 4
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Schienen'
+      DataPipeline = dmPipelines.Kurse
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Kurse'
+      mmHeight = 3302
+      mmLeft = 47159
+      mmTop = 0
+      mmWidth = 1524
+      BandType = 4
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Label5'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 94456
+      mmTop = 0
+      mmWidth = 8043
+      BandType = 4
+    end
+  end
+  object ppFooterBand2: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 3175
+    mmPrintPosition = 0
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'SystemVariable2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDocumentName
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 35983
+      BandType = 8
+    end
+  end
+  object ppSummaryBand1: TppSummaryBand
+    AlignToBottom = False
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object rbTableGrid1: TrbTableGrid
+      UserName = 'TableGrid1'
+      OutlineStyle = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      ShowCoordinates = False
+      ShiftWithParent = False
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 172509
+      BandType = 7
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      CellsData = (
+        1
+        12
+        36
+        65
+        55
+        40
+        55
+        50
+        50
+        50
+        50
+        50
+        50
+        50
+        15
+        536871184
+        67108864
+        536871184
+        67108864
+        536871184
+        67108864
+        536871184
+        67108864
+        536871184
+        67108864
+        536871184
+        67108864
+        536871184
+        67108864
+        536871184
+        67305475
+        536871184
+        67108864
+        536871184
+        67108867
+        536871184
+        67108867
+        536871184
+        67305475)
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Summe:'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 76465
+      mmTop = 0
+      mmWidth = 13494
+      BandType = 7
+    end
+    object ppLabel11: TppLabel
+      UserName = 'SumKoop'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Koop'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4064
+      mmLeft = 94456
+      mmTop = 0
+      mmWidth = 8996
+      BandType = 7
+    end
+    object ppLabel13: TppLabel
+      UserName = 'SumAbi4'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Abi4'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4064
+      mmLeft = 120915
+      mmTop = 0
+      mmWidth = 9525
+      BandType = 7
+    end
+    object ppLabel14: TppLabel
+      UserName = 'SumAbi3'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Abi3'
+      Ellipsis = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 4064
+      mmLeft = 147638
+      mmTop = 0
+      mmWidth = 8996
+      BandType = 7
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'KursartAllg'
+    DataPipeline = dmPipelines.Kurse
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Kurse'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 7408
+      mmPrintPosition = 0
+      object rbTableGrid3: TrbTableGrid
+        UserName = 'TableGrid3'
+        OutlineStyle = 0
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        ShowCoordinates = False
+        ShiftWithParent = False
+        mmHeight = 5556
+        mmLeft = 0
+        mmTop = 1852
+        mmWidth = 172509
+        BandType = 3
+        GroupNo = 0
+        mmBottomOffset = 0
+        mmOverFlowOffset = 0
+        mmStopPosition = 0
+        CellsData = (
+          1
+          13
+          36
+          65
+          55
+          40
+          55
+          50
+          50
+          50
+          50
+          50
+          50
+          50
+          50
+          20
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50332419
+          536871184
+          50529027)
+      end
+      object ppLabel24: TppLabel
+        UserName = 'Label24'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Kursart'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 11642
+        mmTop = 2381
+        mmWidth = 11377
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel25: TppLabel
+        UserName = 'Label25'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Kurs'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 30956
+        mmTop = 2381
+        mmWidth = 7144
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel26: TppLabel
+        UserName = 'Label26'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Lehrer'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 53975
+        mmTop = 2381
+        mmWidth = 10054
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel27: TppLabel
+        UserName = 'Label27'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'weibl.'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 68792
+        mmTop = 2381
+        mmWidth = 8996
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel28: TppLabel
+        UserName = 'Label28'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'm'#228'nnl.'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 80963
+        mmTop = 2381
+        mmWidth = 10583
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel29: TppLabel
+        UserName = 'Label29'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'mdl.'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 109273
+        mmTop = 2381
+        mmWidth = 6879
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel30: TppLabel
+        UserName = 'Label30'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Abi 4'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 122238
+        mmTop = 2381
+        mmWidth = 8202
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel31: TppLabel
+        UserName = 'Label31'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'schr.'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 135202
+        mmTop = 2381
+        mmWidth = 7673
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel32: TppLabel
+        UserName = 'Label32'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Abi 3'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 148432
+        mmTop = 2381
+        mmWidth = 8202
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel33: TppLabel
+        UserName = 'Label33'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'gesamt'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 159279
+        mmTop = 2381
+        mmWidth = 12700
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel4: TppLabel
+        UserName = 'Label4'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Block'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 42069
+        mmTop = 2381
+        mmWidth = 8731
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Koop'
+        Ellipsis = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Name = 'MS Sans Serif'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 95250
+        mmTop = 2381
+        mmWidth = 8213
+        BandType = 3
+        GroupNo = 0
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule2: TraCodeModule
+    ProgramStream = {
+      01060F547261436F6E737450726F6772616D094368696C645479706502120B50
+      726F6772616D4E616D650609436F6E7374616E74730B50726F6772616D547970
+      65070B747450726F63656475726506536F75726365064D70726F636564757265
+      20436F6E7374616E74733B0D0A636F6E73740D0A202020202020526570566572
+      73696F6E203D2027312E3020476F65273B0D0A0D0A626567696E0D0A0D0A656E
+      643B0D0A0001060D54726156617250726F6772616D094368696C645479706502
+      110B50726F6772616D4E616D6506095661726961626C65730B50726F6772616D
+      54797065070B747450726F63656475726506536F7572636506BE70726F636564
+      757265205661726961626C65733B0D0A7661720D0A2020202020207A772C207A
+      6D2C207A736368722C207A6D646C2C207A616269332C207A616269342C206765
+      73616269332C20676573616269342C207A4B6F6F702C0D0A2020202020206765
+      734B6F6F70203A20696E74656765723B0D0A2020202020207A546578742C207A
+      6C65747A746553747566652C207A6C65747A74654B757273617274203A207374
+      72696E673B0D0A0D0A626567696E0D0A0D0A656E643B0D0A0001060F54726145
+      76656E7448616E646C65720B50726F6772616D4E616D65061144657461696C42
+      65666F72655072696E740B50726F6772616D54797065070B747450726F636564
+      75726506536F757263650C2601000070726F6365647572652044657461696C42
+      65666F72655072696E743B0D0A626567696E0D0A20207B7A74657874203A3D20
+      207A74657874202B204B757273655B274B757273617274416C6C67275D202B20
+      272027202B20204B757273655B274B75727A42657A275D202B20272027202B20
+      696E74746F73747220287A7729202B20272027202B20696E74746F7374722028
+      207A6D29202B20636872283133293B207D0D0A2020444254657874332E566973
+      69626C653A3D207A6C65747A74655374756665203C3E204B757273655B274153
+      444A61687267616E67275D3B0D0A2020444254657874322E56697369626C653A
+      3D207A6C65747A74654B757273617274203C3E204B757273655B274B75727361
+      7274416C6C67275D3B200D0A656E643B0D0A200D0A0D436F6D706F6E656E744E
+      616D65060644657461696C094576656E744E616D65060B4265666F7265507269
+      6E74074576656E74494402180001060F5472614576656E7448616E646C65720B
+      50726F6772616D4E616D65060F4C6162656C314F6E476574546578740B50726F
+      6772616D54797065070B747450726F63656475726506536F7572636506807072
+      6F636564757265204C6162656C314F6E47657454657874287661722054657874
+      3A20537472696E67293B0D0A626567696E2020202020202020200D0A20205465
+      78743A3D20696E74746F737472287A77293B0D0A202049662054657874203D20
+      273027207468656E20546578743A3D2027273B2020200D0A656E643B0D0A0D43
+      6F6D706F6E656E744E616D6506064C6162656C31094576656E744E616D650609
+      4F6E47657454657874074576656E74494402350001060F5472614576656E7448
+      616E646C65720B50726F6772616D4E616D65060F4C6162656C324F6E47657454
+      6578740B50726F6772616D54797065070B747450726F63656475726506536F75
+      726365067E70726F636564757265204C6162656C324F6E476574546578742876
+      617220546578743A20537472696E67293B0D0A626567696E2020202020200D0A
+      202054657874203A3D20696E74746F73747220287A6D293B0D0A202049662054
+      657874203D20273027207468656E20546578743A3D2027273B20200D0A656E64
+      3B0D0A0D436F6D706F6E656E744E616D6506064C6162656C32094576656E744E
+      616D6506094F6E47657454657874074576656E74494402350001060F54726145
+      76656E7448616E646C65720B50726F6772616D4E616D6506104C6162656C3131
+      4F6E476574546578740B50726F6772616D54797065070B747450726F63656475
+      726506536F75726365066170726F636564757265204C6162656C31314F6E4765
+      74546578742876617220546578743A20537472696E67293B0D0A626567696E20
+      202020200D0A202054657874203A3D20696E74746F737472287A77202B207A6D
+      293B20200D0A656E643B0D0A0D436F6D706F6E656E744E616D6506074C616265
+      6C3131094576656E744E616D6506094F6E47657454657874074576656E744944
+      02350001060F5472614576656E7448616E646C65720B50726F6772616D4E616D
+      650610444254657874344F6E476574546578740B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365067B70726F6365647572652044
+      4254657874344F6E476574546578742876617220546578743A20537472696E67
+      293B0D0A626567696E202020200D0A202054657874203A3D2054657874202B20
+      272F27202B2028696E74746F73747228737472746F696E74285465787429202B
+      203129293B2020200D0A656E643B0D0A0D436F6D706F6E656E744E616D650607
+      44425465787434094576656E744E616D6506094F6E4765745465787407457665
+      6E74494402350001060F5472614576656E7448616E646C65720B50726F677261
+      6D4E616D6506165265706F72744F6E53746172744669727374506173730B5072
+      6F6772616D54797065070B747450726F63656475726506536F7572636506EA70
+      726F636564757265205265706F72744F6E53746172744669727374506173733B
+      0D0A626567696E0D0A20205365747A65536F7274696572756E67284B75727365
+      2C274153444A61687267616E672C4B757273617274416C6C672C4B75727A6265
+      7A27293B0D0A20207A6D203A3D20303B0D0A20207A77203A3D20303B0D0A2020
+      7A6D646C3A3D20303B0D0A20207A736368723A3D20303B0D0A20207A61626933
+      3A3D20303B0D0A20207A616269343A3D20303B0D0A2020676573616269333A3D
+      20303B0D0A2020676573616269343A3D20303B0D0A20207A4B6F6F703A3D2030
+      3B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265706F727409
+      4576656E744E616D6506104F6E5374617274466972737450617373074576656E
+      74494402140001060F5472614576656E7448616E646C65720B50726F6772616D
+      4E616D65061044657461696C41667465725072696E740B50726F6772616D5479
+      7065070B747450726F63656475726506536F7572636506DC70726F6365647572
+      652044657461696C41667465725072696E743B0D0A626567696E0D0A20207A6C
+      65747A746553747566653A3D204B757273655B274153444A61687267616E6727
+      5D3B0D0A20207A6C65747A74654B7572736172743A3D204B757273655B274B75
+      7273617274416C6C67275D3B200D0A20207A6D3A3D20303B0D0A20207A773A3D
+      20303B0D0A20207A6D646C3A3D20303B0D0A20207A736368723A3D20303B0D0A
+      20207A616269333A3D20303B0D0A20207A616269343A3D20303B200D0A20207A
+      4B6F6F703A3D20303B2020200D0A656E643B0D0A0D436F6D706F6E656E744E61
+      6D65060644657461696C094576656E744E616D65060A41667465725072696E74
+      074576656E74494402170001060F5472614576656E7448616E646C65720B5072
+      6F6772616D4E616D65061048656164657241667465725072696E740B50726F67
+      72616D54797065070B747450726F63656475726506536F75726365065870726F
+      6365647572652048656164657241667465725072696E743B0D0A626567696E0D
+      0A20207A6C65747A746553747566653A3D2027273B0D0A20207A6C65747A7465
+      4B7572736172743A3D2027273B0D0A656E643B0D0A0D436F6D706F6E656E744E
+      616D650606486561646572094576656E744E616D65060A41667465725072696E
+      74074576656E74494402170001060F5472614576656E7448616E646C65720B50
+      726F6772616D4E616D6506104C6162656C31364F6E476574546578740B50726F
+      6772616D54797065070B747450726F63656475726506536F75726365067B7072
+      6F636564757265204C6162656C31364F6E476574546578742876617220546578
+      743A20537472696E67293B0D0A626567696E20200D0A2020546578743A3D2069
+      6E74746F737472287A73636872293B0D0A202049662054657874203D20273027
+      207468656E20546578743A3D2027273B200D0A656E643B0D0A0D436F6D706F6E
+      656E744E616D6506074C6162656C3136094576656E744E616D6506094F6E4765
+      7454657874074576656E74494402350001060F5472614576656E7448616E646C
+      65720B50726F6772616D4E616D6506104C6162656C31374F6E47657454657874
+      0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+      067B70726F636564757265204C6162656C31374F6E4765745465787428766172
+      20546578743A20537472696E67293B0D0A626567696E2020200D0A2020546578
+      743A3D2020696E74746F737472287A6D646C293B0D0A20204966205465787420
+      3D20273027207468656E20546578743A3D2027273B0D0A656E643B0D0A0D436F
+      6D706F6E656E744E616D6506074C6162656C3137094576656E744E616D650609
+      4F6E47657454657874074576656E74494402350001060F5472614576656E7448
+      616E646C65720B50726F6772616D4E616D6506104C6162656C32304F6E476574
+      546578740B50726F6772616D54797065070B747450726F63656475726506536F
+      75726365069B70726F636564757265204C6162656C32304F6E47657454657874
+      2876617220546578743A20537472696E67293B0D0A626567696E202020200D0A
+      2020546578743A3D20696E74746F737472287A61626934293B0D0A2020496620
+      54657874203D20273027207468656E20546578743A3D2027273B0D0A20206765
+      73616269343A3D2067657361626934202B207A616269343B200D0A656E643B0D
+      0A0D436F6D706F6E656E744E616D6506074C6162656C3230094576656E744E61
+      6D6506094F6E47657454657874074576656E74494402350001060F5472614576
+      656E7448616E646C65720B50726F6772616D4E616D6506104C6162656C32314F
+      6E476574546578740B50726F6772616D54797065070B747450726F6365647572
+      6506536F75726365069B70726F636564757265204C6162656C32314F6E476574
+      546578742876617220546578743A20537472696E67293B0D0A626567696E2020
+      20200D0A2020546578743A3D20696E74746F737472287A61626933293B200D0A
+      202049662054657874203D20273027207468656E20546578743A3D2027273B0D
+      0A2020676573616269333A3D2067657361626933202B207A616269333B0D0A65
+      6E643B0D0A0D436F6D706F6E656E744E616D6506074C6162656C323109457665
+      6E744E616D6506094F6E47657454657874074576656E74494402350001060F54
+      72614576656E7448616E646C65720B50726F6772616D4E616D65060D4C616265
+      6C324F6E5072696E740B50726F6772616D54797065070B747450726F63656475
+      726506536F75726365064470726F636564757265204C6162656C324F6E507269
+      6E743B0D0A626567696E0D0A204C6162656C312E76697369626C653A3D20287A
+      6D203D2030293B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064C
+      6162656C32094576656E744E616D6506074F6E5072696E74074576656E744944
+      02200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D
+      65060F4C6162656C354F6E476574546578740B50726F6772616D54797065070B
+      747450726F63656475726506536F75726365069A70726F636564757265204C61
+      62656C354F6E476574546578742876617220546578743A20537472696E67293B
+      0D0A626567696E202020200D0A2020546578743A3D20696E74746F737472287A
+      4B6F6F70293B200D0A202049662054657874203D20273027207468656E205465
+      78743A3D2027273B0D0A20206765734B6F6F703A3D206765734B6F6F70202B20
+      7A4B6F6F703B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064C61
+      62656C35094576656E744E616D6506094F6E47657454657874074576656E7449
+      4402350001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+      6D65060E53756D4B6F6F704F6E5072696E740B50726F6772616D54797065070B
+      747450726F63656475726506536F75726365064D70726F636564757265205375
+      6D4B6F6F704F6E5072696E743B0D0A626567696E0D0A202053756D4B6F6F702E
+      546578743A3D20496E74546F537472286765734B6F6F70293B0D0A656E643B0D
+      0A0D436F6D706F6E656E744E616D65060753756D4B6F6F70094576656E744E61
+      6D6506074F6E5072696E74074576656E74494402200001060F5472614576656E
+      7448616E646C65720B50726F6772616D4E616D65060E53756D416269344F6E50
+      72696E740B50726F6772616D54797065070B747450726F63656475726506536F
+      75726365064C70726F6365647572652053756D416269344F6E5072696E743B0D
+      0A626567696E0D0A2053756D416269342E546578743A3D20496E74546F537472
+      2867657341626934293B0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      060753756D41626934094576656E744E616D6506074F6E5072696E7407457665
+      6E74494402200001060F5472614576656E7448616E646C65720B50726F677261
+      6D4E616D65060E53756D416269334F6E5072696E740B50726F6772616D547970
+      65070B747450726F63656475726506536F75726365064D70726F636564757265
+      2053756D416269334F6E5072696E743B0D0A626567696E0D0A202053756D4162
+      69332E546578743A3D20496E74546F5374722867657341626933293B0D0A656E
+      643B0D0A0D436F6D706F6E656E744E616D65060753756D41626933094576656E
+      744E616D6506074F6E5072696E74074576656E74494402200000}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

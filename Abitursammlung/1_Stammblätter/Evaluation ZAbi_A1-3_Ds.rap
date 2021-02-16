@@ -1,0 +1,31 @@
+procedure Label1OnGetText(var Text: String);
+begin
+
+  Text := Text + ' ' +  IntToStr(Schueler['AktSchuljahr'] + 1);
+
+end;
+
+
+procedure Label3OnGetText(var Text: String);
+begin
+
+  Text := Schueler['Name'] + ', ' + Schueler['Vorname'];
+
+end;
+
+
+procedure ReportBeforePrint;
+begin
+	SetAbitur(true);
+
+end;
+
+
+procedure Constants;
+const
+   RepVers='ReportVersion: BA.05.01';
+begin
+
+end;
+
+

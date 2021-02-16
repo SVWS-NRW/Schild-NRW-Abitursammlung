@@ -1,0 +1,3222 @@
+object Report: TppReport
+  AutoStop = False
+  DataPipeline = dmPipelines.Schueler
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_mit_BLL.rtm'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 4000
+  PrinterSetup.mmMarginRight = 3350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.FileName = 
+    'C:\Program Files\SchILD-NRW\Schild-Reports\ASGSG-Reports\Abitur\' +
+    'Konferenzen_des_ZAA\Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_' +
+    'P_mit_BLL.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforePrint = ReportBeforePrint
+  BeforeEmail = ReportBeforeEmail
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  EmailSettings.Enabled = True
+  LanguageID = 'Default'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.ZoomSetting = zs100Percent
+  PreviewFormSettings.SinglePageOnly = True
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<Suchtext>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 128
+  Top = 8
+  Version = '14.08'
+  mmColumnWidth = 0
+  DataPipelineName = 'Schueler'
+  object ppHeaderBand1: TppHeaderBand
+    Background.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 23813
+    mmPrintPosition = 0
+    object ppLabel2: TppLabel
+      UserName = 'Label1'
+      Caption = #220'bersicht '#252'ber die Abiturergebnisse zur Vorbereitung der 2. ZAA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 16404
+      mmTop = 9790
+      mmWidth = 129911
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label2'
+      Caption = 'Fach Leh'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 81000
+      mmTop = 18785
+      mmWidth = 13758
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label3'
+      Caption = 'Durch.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 97631
+      mmTop = 18785
+      mmWidth = 10054
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label4'
+      Caption = 'Erg'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 112000
+      mmTop = 18785
+      mmWidth = 5292
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label5'
+      Caption = '*5'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 122767
+      mmTop = 18785
+      mmWidth = 6350
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label6'
+      Caption = 'MFP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 147902
+      mmTop = 18785
+      mmWidth = 6731
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label7'
+      Caption = 'Abw.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 138642
+      mmTop = 18785
+      mmWidth = 8467
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label8'
+      Caption = 'MBP'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 129000
+      mmTop = 18785
+      mmWidth = 7408
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label9'
+      Caption = '< 100'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 164307
+      mmTop = 18785
+      mmWidth = 8996
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label10'
+      Caption = 'P25'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3704
+      mmLeft = 176477
+      mmTop = 18785
+      mmWidth = 5556
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSubReport4: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      TraverseAllData = False
+      DataPipelineName = 'EigeneSchule'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 265
+      mmWidth = 202650
+      BandType = 0
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport4: TppChildReport
+        AutoStop = False
+        DataPipeline = dmPipelines.EigeneSchule
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_ASGSG_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utScreenPixels
+        Version = '14.08'
+        mmColumnWidth = 0
+        DataPipelineName = 'EigeneSchule'
+        object ppDetailBand8: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 7673
+          mmPrintPosition = 0
+          object ppDBText31: TppDBText
+            UserName = 'DBText6'
+            AutoSize = True
+            DataField = 'Bezeichnung1'
+            DataPipeline = dmPipelines.EigeneSchule
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 12
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'EigeneSchule'
+            mmHeight = 4868
+            mmLeft = 166423
+            mmTop = 794
+            mmWidth = 26882
+            BandType = 4
+            LayerName = Foreground2
+          end
+          object ppDBText32: TppDBText
+            UserName = 'DBText2'
+            AutoSize = True
+            DataField = 'Schuljahr'
+            DataPipeline = dmPipelines.EigeneSchule
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 12
+            Font.Style = [fsBold]
+            Transparent = True
+            DataPipelineName = 'EigeneSchule'
+            mmHeight = 5027
+            mmLeft = 16404
+            mmTop = 794
+            mmWidth = 9525
+            BandType = 4
+            LayerName = Foreground2
+          end
+        end
+        object raCodeModule8: TraCodeModule
+          ProgramStream = {
+            01060D54726156617250726F6772616D094368696C645479706502110B50726F
+            6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+            0B747450726F63656475726506536F75726365064270726F6365647572652056
+            61726961626C65733B0D0A7661720D0A20202020202020446174756D3A537472
+            696E673B0D0A0D0A626567696E0D0A0D0A656E643B0D0A0001060F5472614576
+            656E7448616E646C65720B50726F6772616D4E616D650610444254657874324F
+            6E476574546578740B50726F6772616D54797065070B747450726F6365647572
+            6506536F7572636514A500000070726F63656475726520444254657874324F6E
+            476574546578742876617220546578743A20537472696E67293B0D0A62656769
+            6E0D0A20202054657874203A3D20274162697475727072C3BC66756E67202720
+            2B20496E74546F53747228456967656E65536368756C655B27536368756C6A61
+            6872275D202B2031293B0D0A656E643B20202020202020202020202020202020
+            202020202020202020202020202020200D0A0D436F6D706F6E656E744E616D65
+            060744425465787432094576656E744E616D6506094F6E476574546578740745
+            76656E74494402350000}
+        end
+        object ppDesignLayers6: TppDesignLayers
+          object ppDesignLayer9: TppDesignLayer
+            UserName = 'Foreground2'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 1588
+      mmLeft = 6615
+      mmTop = 22225
+      mmWidth = 187590
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label11'
+      Caption = 'RF'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 156369
+      mmTop = 18785
+      mmWidth = 4233
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel34: TppLabel
+      UserName = 'Label12'
+      Caption = 'P/F'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 187135
+      mmTop = 18785
+      mmWidth = 4953
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppLabel35: TppLabel
+      UserName = 'Label35'
+      Caption = 'AB'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3810
+      mmLeft = 74083
+      mmTop = 18785
+      mmWidth = 4530
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand2: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 20638
+    mmPrintPosition = 0
+    object ppSubReport30: TppSubReport
+      UserName = 'SubReport_Abi4'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plAbifaecher'
+      mmHeight = 5000
+      mmLeft = 73819
+      mmTop = 15000
+      mmWidth = 73290
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport30: TppChildReport
+        AutoStop = False
+        DataPipeline = dmPipelines.plAbifaecher
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_ASGSG_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '14.08'
+        mmColumnWidth = 0
+        DataPipelineName = 'plAbifaecher'
+        object ppTitleBand4: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand5: TppDetailBand
+          Visible = False
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5000
+          mmPrintPosition = 0
+          object ppLabel3: TppLabel
+            UserName = 'Nummer'
+            AutoSize = False
+            Caption = '1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3598
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 5292
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppDBText20: TppDBText
+            UserName = 'Abifach'
+            DataField = 'FachKrz'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4022
+            mmLeft = 8000
+            mmTop = 0
+            mmWidth = 6085
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppDBText22: TppDBText
+            UserName = 'Pruefpunkte'
+            DataField = 'AbiPruefErgebnis'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4586
+            mmLeft = 33073
+            mmTop = 0
+            mmWidth = 10054
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppDBText23: TppDBText
+            UserName = 'DBPflicht'
+            DataField = 'MdlBestPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 55563
+            mmTop = 0
+            mmWidth = 5821
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppDBText24: TppDBText
+            UserName = 'DBDurchschnitt'
+            DataField = 'Durchschnitt'
+            DataPipeline = dmPipelines.plAbifaecher
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 22225
+            mmTop = 0
+            mmWidth = 12700
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLabel24: TppLabel
+            UserName = 'LaAbw'
+            Caption = '  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            mmHeight = 4498
+            mmLeft = 63765
+            mmTop = 0
+            mmWidth = 7938
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLabel25: TppLabel
+            UserName = 'LaErgeb'
+            Caption = 'LaErgeb'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 45773
+            mmTop = 0
+            mmWidth = 7673
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppDBText26: TppDBText
+            UserName = 'DBLeh'
+            DataField = 'Fachlehrer'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 92604
+            mmTop = 0
+            mmWidth = 7408
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLabel26: TppLabel
+            UserName = 'LaLeh'
+            Caption = 'Leh'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3260
+            mmLeft = 14887
+            mmTop = 500
+            mmWidth = 4699
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine34: TppLine
+            UserName = 'Line3'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine35: TppLine
+            UserName = 'Line4'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 20638
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine36: TppLine
+            UserName = 'Line5'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 34660
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine37: TppLine
+            UserName = 'Line6'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 43921
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine38: TppLine
+            UserName = 'Line7'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 6615
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine39: TppLine
+            UserName = 'Line8'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 54240
+            mmTop = 0
+            mmWidth = 1058
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine40: TppLine
+            UserName = 'Line9'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 62706
+            mmTop = 0
+            mmWidth = 2117
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine41: TppLine
+            UserName = 'Line10'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine42: TppLine
+            UserName = 'Line11'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 81000
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine43: TppLine
+            UserName = 'Line13'
+            Pen.Style = psDot
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 1588
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 81000
+            BandType = 4
+            LayerName = BandLayer7
+          end
+          object ppLine51: TppLine
+            UserName = 'Line51'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5027
+            mmLeft = 88900
+            mmTop = 0
+            mmWidth = 5556
+            BandType = 4
+            LayerName = BandLayer7
+          end
+        end
+        object ppSummaryBand5: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule5: TraCodeModule
+          ProgramStream = {
+            01060A54726150726F6772616D094368696C645479706502150B50726F677261
+            6D4E616D65061461627765696368756E675F6265726563686E656E0B50726F67
+            72616D54797065070B747450726F63656475726506536F757263650C48010000
+            70726F6365647572652061627765696368756E675F6265726563686E656E2864
+            757263687363682C207072663A657874656E6465643B2056415220706162773A
+            20626F6F6C65616E203B2056415220617573676162653A737472696E67293B0D
+            0A0D0A626567696E200D0A2020617573676162653A3D27273B0D0A2020706162
+            773A3D2066616C73653B200D0A2020696620287072663E3D2864757263687363
+            682B342929207468656E20626567696E0D0A20202020617573676162653A3D27
+            412B273B0D0A20202020706162773A3D20747275653B0D0A2020656E640D0A20
+            20656C73650D0A20202020696620287072663C3D2864757263687363682D3429
+            29207468656E20626567696E0D0A202020202020617573676162653A3D27412D
+            273B0D0A202020202020706162773A3D20747275653B0D0A20202020656E643B
+            0D0A656E643B0D0A0001060F5472614576656E7448616E646C65720B50726F67
+            72616D4E616D65061144657461696C4265666F72655072696E740B50726F6772
+            616D54797065070B747450726F63656475726506536F7572636506D070726F63
+            65647572652044657461696C4265666F72655072696E743B0D0A626567696E0D
+            0A202044657461696C2E56697369626C65203A3D202041626966616563686572
+            5B2741626946616368275D203D202734273B0D0A20206162345F755F32353A3D
+            2066616C73653B0D0A20206966207034203C203235207468656E206162345F75
+            5F32353A3D20747275653B0D0A656E643B202020202020202020202020202020
+            2020202020202020202020202020202020202020202020202020202020202020
+            202020202020202020200D0A0D436F6D706F6E656E744E616D65060644657461
+            696C094576656E744E616D65060B4265666F72655072696E74074576656E7449
+            4402180001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+            6D650610416269666163684F6E476574546578740B50726F6772616D54797065
+            070B747450726F63656475726506536F757263650CAC02000070726F63656475
+            726520416269666163684F6E476574546578742876617220546578743A205374
+            72696E67293B0D0A5641520D0A2020617573676162653A20737472696E673B0D
+            0A626567696E0D0A2020696620416269666165636865725B2741626946616368
+            275D203D20273427207468656E20626567696E0D0A202020206E756D6D65722E
+            746578743A3D2020416269666165636865725B2741626946616368275D3B0D0A
+            20202020696620707275656670756E6B74652E746578743D2727207468656E20
+            707266657267343A3D2D310D0A202020202020656C736520707266657267343A
+            3D20737472746F696E7428416269666165636865725B27416269507275656645
+            726765626E6973275D293B0D0A2020202069662070726665726734203E2D3120
+            7468656E20626567696E0D0A20202020202069662028284162697475725B2742
+            4C4C5F417274275D3D27452729206F7220284162697475725B27424C4C5F4172
+            74275D3D2750272929207468656E2070343A3D20342A7072666572673420656C
+            73652070343A3D20352A707266657267343B0D0A2020202020204C614162772E
+            746578743A3D20617573676162653B0D0A2020202020206C6165726765622E74
+            6578743A3D20696E74746F737472287034293B20202020202020202020202020
+            202020202020202020202020202020202020202020202020202020202020200D
+            0A2020202020206C616C65682E746578743A3D202728272B64626C65682E7465
+            78742B2729273B0D0A20202020656E640D0A20202020656C736520626567696E
+            0D0A2020202020206C6165726765622E746578743A3D20273F3F273B200D0A20
+            202020202070343A3D2D313B0D0A202020202020646174656E6665686C65723A
+            3D20747275653B200D0A20202020656E643B2020200D0A2020656E643B0D0A65
+            6E643B0D0A0D436F6D706F6E656E744E616D6506074162696661636809457665
+            6E744E616D6506094F6E47657454657874074576656E74494402350001060F54
+            72614576656E7448616E646C65720B50726F6772616D4E616D65061450727565
+            6670756E6B74654F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F7572636506BB70726F6365647572652050727565
+            6670756E6B74654F6E476574546578742876617220546578743A20537472696E
+            67293B0D0A626567696E0D0A202069662054657874203C3E202727207468656E
+            0D0A2020202054657874203A3D20466F726D6174466C6F617428273023272C41
+            6269666165636865725B27416269507275656645726765626E6973275D293B0D
+            0A656E643B202020202020202020202020202020202020202020202020202020
+            20202020202020202020200D0A0D436F6D706F6E656E744E616D65060B507275
+            656670756E6B7465094576656E744E616D6506094F6E47657454657874074576
+            656E74494402350000}
+        end
+        object ppDesignLayers5: TppDesignLayers
+          object ppDesignLayer5: TppDesignLayer
+            UserName = 'BandLayer7'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      AutoSize = True
+      DataField = 'NameVorname'
+      DataPipeline = dmPipelines.Schueler
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'Schueler'
+      mmHeight = 4657
+      mmLeft = 16140
+      mmTop = 1058
+      mmWidth = 28236
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      DataPipeline = dmPipelines.Schueler
+      DisplayFormat = '###"."'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      ResetGroup = ppGroup1
+      TextAlignment = taRightJustified
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'Schueler'
+      mmHeight = 5027
+      mmLeft = 6615
+      mmTop = 1058
+      mmWidth = 7938
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppSubReport1: TppSubReport
+      UserName = 'SR_Abiturfach1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plAbifaecher'
+      mmHeight = 5027
+      mmLeft = 73819
+      mmTop = 0
+      mmWidth = 73290
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = dmPipelines.plAbifaecher
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_ASGSG_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '14.08'
+        mmColumnWidth = 0
+        DataPipelineName = 'plAbifaecher'
+        object ppTitleBand1: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand1: TppDetailBand
+          Visible = False
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5000
+          mmPrintPosition = 0
+          object ppLabel38: TppLabel
+            UserName = 'Nummer'
+            AutoSize = False
+            Caption = '1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 5292
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText2: TppDBText
+            UserName = 'Abifach'
+            DataField = 'FachKrz'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4022
+            mmLeft = 7938
+            mmTop = 0
+            mmWidth = 6085
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText7: TppDBText
+            UserName = 'Pruefpunkte'
+            DataField = 'AbiPruefErgebnis'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 33073
+            mmTop = 0
+            mmWidth = 10054
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText19: TppDBText
+            UserName = 'DBBestehen'
+            DataField = 'MdlBestPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 55563
+            mmTop = 0
+            mmWidth = 5821
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText21: TppDBText
+            UserName = 'DBDurchschnitt'
+            DataField = 'Durchschnitt'
+            DataPipeline = dmPipelines.plAbifaecher
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4487
+            mmLeft = 20000
+            mmTop = 0
+            mmWidth = 12700
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText8: TppDBText
+            UserName = 'DBFreiwillig'
+            DataField = 'MdlFreiwPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 7144
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLabel41: TppLabel
+            UserName = 'LaAbw'
+            Caption = '  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 64000
+            mmTop = 0
+            mmWidth = 8000
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLabel190: TppLabel
+            UserName = 'LaErgeb'
+            Caption = 'LaErgeb'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 45773
+            mmTop = 0
+            mmWidth = 7673
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText9: TppDBText
+            UserName = 'DBLeh'
+            DataField = 'Fachlehrer'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 92604
+            mmTop = 0
+            mmWidth = 7408
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLabel188: TppLabel
+            UserName = 'LaLeh'
+            Caption = 'Leh'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3260
+            mmLeft = 14880
+            mmTop = 529
+            mmWidth = 4699
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine3: TppLine
+            UserName = 'Line3'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine4: TppLine
+            UserName = 'Line4'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 20638
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine5: TppLine
+            UserName = 'Line5'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 34660
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine6: TppLine
+            UserName = 'Line6'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 43921
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine7: TppLine
+            UserName = 'Line7'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 6615
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine8: TppLine
+            UserName = 'Line8'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 54240
+            mmTop = 0
+            mmWidth = 1058
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine9: TppLine
+            UserName = 'Line9'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 62706
+            mmTop = 0
+            mmWidth = 2117
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine10: TppLine
+            UserName = 'Line10'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine11: TppLine
+            UserName = 'Line11'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 80963
+            mmTop = 0
+            mmWidth = 2117
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppDBText25: TppDBText
+            UserName = 'DBPrueffolge'
+            DataField = 'MdlPruefFolge'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 82000
+            mmTop = 0
+            mmWidth = 5000
+            BandType = 4
+            LayerName = Foreground3
+          end
+          object ppLine48: TppLine
+            UserName = 'Line48'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 89000
+            mmTop = 0
+            mmWidth = 4498
+            BandType = 4
+            LayerName = Foreground3
+          end
+        end
+        object ppSummaryBand2: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule1: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+            44657461696C4265666F72655072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F7572636506EC70726F63656475726520446574
+            61696C4265666F72655072696E743B0D0A626567696E0D0A202044657461696C
+            2E56697369626C65203A3D2020416269666165636865725B2741626946616368
+            275D203D202731273B0D0A2020707275656673756D6D653A3D2070312B70322B
+            70332B70343B0D0A20206C6B315F755F32353A3D66616C73653B0D0A20206966
+            207031203C203235207468656E206C6B315F755F32353A3D20747275653B0D0A
+            656E643B20202020202020202020202020202020202020202020202020202020
+            20202020202020202020202020202020202020202020202020202020200D0A0D
+            436F6D706F6E656E744E616D65060644657461696C094576656E744E616D6506
+            0B4265666F72655072696E74074576656E74494402180001060F547261457665
+            6E7448616E646C65720B50726F6772616D4E616D650610416269666163684F6E
+            476574546578740B50726F6772616D54797065070B747450726F636564757265
+            06536F757263650C4104000070726F63656475726520416269666163684F6E47
+            6574546578742876617220546578743A20537472696E67293B0D0A5641520D0A
+            2020617573676162653A20737472696E673B0D0A626567696E0D0A2020696620
+            416269666165636865725B2741626946616368275D203D20273127207468656E
+            20626567696E0D0A202020206E756D6D65722E746578743A3D20204162696661
+            65636865725B2741626946616368275D3B0D0A20202020696620707275656670
+            756E6B74652E746578743D2727207468656E20707266657267313A3D2D310D0A
+            20202020656C736520707266657267313A3D20737472746F696E742841626966
+            6165636865725B27416269507275656645726765626E6973275D293B0D0A2020
+            202069662070726665726731203E2D31207468656E20626567696E0D0A202020
+            20202069662028284162697475725B27424C4C5F417274275D3D27452729206F
+            7220284162697475725B27424C4C5F417274275D3D2750272929207468656E20
+            70313A3D20342A7072666572673120656C73652070313A3D20352A7072666572
+            67313B0D0A20202020202061627765696368756E675F6265726563686E656E28
+            416269666165636865725B2744757263687363686E697474275D2C4162696661
+            65636865725B27416269507275656665726765626E6973275D2C616277312C61
+            757367616265293B0D0A2020202020204C614162772E746578743A3D20617573
+            676162653B0D0A2020202020206C6165726765622E746578743A3D20696E7474
+            6F737472287031293B2020202020202020202020202020202020202020202020
+            2020202020202020202020202020202020202020200D0A2020202020206C616C
+            65682E746578743A3D202728272B64626C65682E746578742B2729273B0D0A20
+            2020202020646264757263687363686E6974742E746578743A3D20466F726D61
+            74466C6F6174282730302C3030272C416269666165636865725B274475726368
+            7363686E697474275D293B0D0A20202020202069662041626966616563686572
+            5B276D646C426573745072756566756E67275D3D272B27207468656E206D6974
+            5F7072756566756E673A3D20747275653B0D0A20202020202069662041626966
+            6165636865725B276D646C50666C696368745072756566756E67275D3D272B27
+            207468656E206D69745F7072756566756E673A3D20747275653B200D0A202020
+            202020696620416269666165636865725B276D646C6672656977507275656675
+            6E67275D3D272B27207468656E206D69745F7072756566756E673A3D20747275
+            653B2020200D0A20202020656E640D0A20202020656C736520626567696E200D
+            0A2020202020206C6165726765622E746578743A3D20273F3F273B200D0A2020
+            2020202070313A3D2D313B200D0A202020202020646174656E6665686C65723A
+            3D747275653B0D0A20202020656E643B200D0A2020656E643B20202020202020
+            20202020200D0A656E643B0D0A0D436F6D706F6E656E744E616D650607416269
+            66616368094576656E744E616D6506094F6E47657454657874074576656E7449
+            4402350001060F5472614576656E7448616E646C65720B50726F6772616D4E61
+            6D650614507275656670756E6B74654F6E476574546578740B50726F6772616D
+            54797065070B747450726F63656475726506536F7572636506BB70726F636564
+            75726520507275656670756E6B74654F6E476574546578742876617220546578
+            743A20537472696E67293B0D0A626567696E0D0A202069662054657874203C3E
+            202727207468656E0D0A2020202054657874203A3D20466F726D6174466C6F61
+            7428273023272C416269666165636865725B2741626950727565664572676562
+            6E6973275D293B0D0A656E643B20202020202020202020202020202020202020
+            202020202020202020202020202020202020200D0A0D436F6D706F6E656E744E
+            616D65060B507275656670756E6B7465094576656E744E616D6506094F6E4765
+            7454657874074576656E74494402350001060F5472614576656E7448616E646C
+            65720B50726F6772616D4E616D6506115265706F72744F6E456E64436F6C756D
+            6E0B50726F6772616D54797065070B747450726F63656475726506536F757263
+            65062D70726F636564757265205265706F72744F6E456E64436F6C756D6E3B0D
+            0A626567696E0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650606
+            5265706F7274094576656E744E616D65060B4F6E456E64436F6C756D6E074576
+            656E744944020F0001060F5472614576656E7448616E646C65720B50726F6772
+            616D4E616D6506134442426573746568656E4F6E476574546578740B50726F67
+            72616D54797065070B747450726F63656475726506536F75726365066670726F
+            636564757265204442426573746568656E4F6E47657454657874287661722054
+            6578743A20537472696E67293B0D0A626567696E0D0A0D0A2020202069662074
+            6578743D272D27207468656E2054657874203A3D202027273B0D0A0D0A656E64
+            3B0D0A0D436F6D706F6E656E744E616D65060A4442426573746568656E094576
+            656E744E616D6506094F6E47657454657874074576656E74494402350001060F
+            5472614576656E7448616E646C65720B50726F6772616D4E616D650615444246
+            72656977696C6C69674F6E476574546578740B50726F6772616D54797065070B
+            747450726F63656475726506536F75726365066870726F636564757265204442
+            4672656977696C6C69674F6E476574546578742876617220546578743A205374
+            72696E67293B0D0A626567696E0D0A0D0A20202020696620746578743D272D27
+            207468656E2054657874203A3D202027273B0D0A0D0A656E643B0D0A0D436F6D
+            706F6E656E744E616D65060C44424672656977696C6C6967094576656E744E61
+            6D6506094F6E47657454657874074576656E74494402350000}
+        end
+        object ppDesignLayers2: TppDesignLayers
+          object ppDesignLayer2: TppDesignLayer
+            UserName = 'Foreground3'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppSubReport2: TppSubReport
+      UserName = 'SR_Abiturfach2'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plAbifaecher'
+      mmHeight = 5027
+      mmLeft = 73819
+      mmTop = 5000
+      mmWidth = 73290
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport2: TppChildReport
+        AutoStop = False
+        DataPipeline = dmPipelines.plAbifaecher
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_ASGSG_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '14.08'
+        mmColumnWidth = 0
+        DataPipelineName = 'plAbifaecher'
+        object ppTitleBand2: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand3: TppDetailBand
+          Visible = False
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5000
+          mmPrintPosition = 0
+          object ppLabel16: TppLabel
+            UserName = 'Nummer'
+            AutoSize = False
+            Caption = '1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3598
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 5292
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText3: TppDBText
+            UserName = 'Abifach'
+            DataField = 'FachKrz'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4022
+            mmLeft = 8000
+            mmTop = 0
+            mmWidth = 6085
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText4: TppDBText
+            UserName = 'Pruefpunkte'
+            DataField = 'AbiPruefErgebnis'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4586
+            mmLeft = 33073
+            mmTop = 0
+            mmWidth = 10054
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText10: TppDBText
+            UserName = 'DBBestehen'
+            DataField = 'MdlBestPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 55563
+            mmTop = 0
+            mmWidth = 5821
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText11: TppDBText
+            UserName = 'DBDurchschnitt'
+            DataField = 'Durchschnitt'
+            DataPipeline = dmPipelines.plAbifaecher
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4487
+            mmLeft = 20000
+            mmTop = 0
+            mmWidth = 12700
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText12: TppDBText
+            UserName = 'DBFreiwillig'
+            DataField = 'MdlFreiwPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 7144
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLabel17: TppLabel
+            UserName = 'LaAbw'
+            Caption = '  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 64000
+            mmTop = 0
+            mmWidth = 8000
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLabel18: TppLabel
+            UserName = 'LaErgeb'
+            Caption = 'LaErgeb'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 45773
+            mmTop = 0
+            mmWidth = 7673
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText16: TppDBText
+            UserName = 'DBLeh'
+            DataField = 'Fachlehrer'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 92604
+            mmTop = 0
+            mmWidth = 7408
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLabel19: TppLabel
+            UserName = 'LaLeh'
+            Caption = 'Leh'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3260
+            mmLeft = 14887
+            mmTop = 500
+            mmWidth = 4699
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine12: TppLine
+            UserName = 'Line3'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine15: TppLine
+            UserName = 'Line4'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 20638
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine16: TppLine
+            UserName = 'Line5'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 34660
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine17: TppLine
+            UserName = 'Line6'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 43921
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine18: TppLine
+            UserName = 'Line7'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 6615
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine19: TppLine
+            UserName = 'Line8'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 54240
+            mmTop = 0
+            mmWidth = 1058
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine20: TppLine
+            UserName = 'Line9'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 62706
+            mmTop = 0
+            mmWidth = 2117
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine21: TppLine
+            UserName = 'Line10'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine22: TppLine
+            UserName = 'Line11'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 81000
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine23: TppLine
+            UserName = 'Line13'
+            Pen.Style = psDot
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 1588
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 81000
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppDBText33: TppDBText
+            UserName = 'DBPrueffolge'
+            DataField = 'MdlPruefFolge'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 82000
+            mmTop = 0
+            mmWidth = 5000
+            BandType = 4
+            LayerName = BandLayer5
+          end
+          object ppLine49: TppLine
+            UserName = 'Line49'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5027
+            mmLeft = 88900
+            mmTop = 0
+            mmWidth = 4233
+            BandType = 4
+            LayerName = BandLayer5
+          end
+        end
+        object ppSummaryBand1: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule3: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+            44657461696C4265666F72655072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F7572636506D070726F63656475726520446574
+            61696C4265666F72655072696E743B0D0A626567696E0D0A202044657461696C
+            2E56697369626C65203A3D2020416269666165636865725B2741626946616368
+            275D203D202732273B200D0A20206C6B325F755F32353A3D66616C73653B0D0A
+            20206966207032203C203235207468656E206C6B325F755F32353A3D20747275
+            653B0D0A656E643B202020202020202020202020202020202020202020202020
+            2020202020202020202020202020202020202020202020202020202020202020
+            200D0A0D436F6D706F6E656E744E616D65060644657461696C094576656E744E
+            616D65060B4265666F72655072696E74074576656E74494402180001060F5472
+            614576656E7448616E646C65720B50726F6772616D4E616D6506104162696661
+            63684F6E476574546578740B50726F6772616D54797065070B747450726F6365
+            6475726506536F757263650C5504000070726F63656475726520416269666163
+            684F6E476574546578742876617220546578743A20537472696E67293B0D0A56
+            41520D0A2020617573676162653A20737472696E673B0D0A20206572673A2069
+            6E74656765723B0D0A626567696E0D0A2020696620416269666165636865725B
+            2741626946616368275D203D20273227207468656E20626567696E0D0A202020
+            206E756D6D65722E746578743A3D2020416269666165636865725B2741626946
+            616368275D3B2020202020200D0A20202020696620707275656670756E6B7465
+            2E746578743D2727207468656E20707266657267323A3D2D310D0A2020202065
+            6C736520707266657267323A3D20737472746F696E7428416269666165636865
+            725B27416269507275656645726765626E6973275D293B0D0A20202020696620
+            707266657267323E2D31207468656E20626567696E0D0A202020202020696620
+            28284162697475725B27424C4C5F417274275D3D27452729206F722028416269
+            7475725B27424C4C5F417274275D3D2750272929207468656E2070323A3D2034
+            2A7072666572673220656C73652070323A3D20352A707266657267323B0D0A20
+            202020202061627765696368756E675F6265726563686E656E28416269666165
+            636865725B2744757263687363686E697474275D2C416269666165636865725B
+            27416269507275656645726765626E6973275D2C616277322C61757367616265
+            293B0D0A2020202020204C614162772E746578743A3D20617573676162653B0D
+            0A2020202020206C6165726765622E746578743A3D20696E74746F7374722870
+            32293B2020202020202020202020202020202020202020202020202020202020
+            2020202020202020202020202020200D0A2020202020206C616C65682E746578
+            743A3D202728272B64626C65682E746578742B2729273B0D0A20202020202064
+            6264757263687363686E6974742E746578743A3D20466F726D6174466C6F6174
+            282730302E3030272C416269666165636865725B2744757263687363686E6974
+            74275D293B0D0A202020202020696620416269666165636865725B276D646C42
+            6573745072756566756E67275D3D272B27207468656E206D69745F7072756566
+            756E673A3D20747275653B0D0A20202020202069662041626966616563686572
+            5B276D646C50666C696368745072756566756E67275D3D272B27207468656E20
+            6D69745F7072756566756E673A3D20747275653B200D0A202020202020696620
+            416269666165636865725B276D646C66726569775072756566756E67275D3D27
+            2B27207468656E206D69745F7072756566756E673A3D20747275653B2020200D
+            0A2020202020656E640D0A2020202020656C736520626567696E200D0A202020
+            202020206C6165726765622E746578743A3D20273F3F273B200D0A2020202020
+            202070323A3D2D313B200D0A20202020202020646174656E6665686C65723A3D
+            747275653B0D0A2020202020656E643B20202020200D0A2020656E643B0D0A65
+            6E643B0D0A0D436F6D706F6E656E744E616D6506074162696661636809457665
+            6E744E616D6506094F6E47657454657874074576656E74494402350001060F54
+            72614576656E7448616E646C65720B50726F6772616D4E616D65061450727565
+            6670756E6B74654F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F7572636506BB70726F6365647572652050727565
+            6670756E6B74654F6E476574546578742876617220546578743A20537472696E
+            67293B0D0A626567696E0D0A202069662054657874203C3E202727207468656E
+            0D0A2020202054657874203A3D20466F726D6174466C6F617428273023272C41
+            6269666165636865725B27416269507275656645726765626E6973275D293B0D
+            0A656E643B202020202020202020202020202020202020202020202020202020
+            20202020202020202020200D0A0D436F6D706F6E656E744E616D65060B507275
+            656670756E6B7465094576656E744E616D6506094F6E47657454657874074576
+            656E74494402350001060F5472614576656E7448616E646C65720B50726F6772
+            616D4E616D6506115265706F72744F6E456E64436F6C756D6E0B50726F677261
+            6D54797065070B747450726F63656475726506536F75726365062D70726F6365
+            64757265205265706F72744F6E456E64436F6C756D6E3B0D0A626567696E0D0A
+            0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265706F72740945
+            76656E744E616D65060B4F6E456E64436F6C756D6E074576656E744944020F00
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650615
+            53525F41626974757266616368314F6E5072696E740B50726F6772616D547970
+            65070B747450726F63656475726506536F75726365062F70726F636564757265
+            2053525F41626974757266616368314F6E5072696E743B0D0A626567696E0D0A
+            656E643B0D0A0D436F6D706F6E656E744E616D65060E53525F41626974757266
+            61636831094576656E744E616D6506074F6E5072696E74074576656E74494402
+            200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+            06134442426573746568656E4F6E476574546578740B50726F6772616D547970
+            65070B747450726F63656475726506536F75726365066470726F636564757265
+            204442426573746568656E4F6E476574546578742876617220546578743A2053
+            7472696E67293B0D0A626567696E0D0A0D0A2020696620746578743D272D2720
+            7468656E2054657874203A3D202027273B0D0A0D0A656E643B0D0A0D436F6D70
+            6F6E656E744E616D65060A4442426573746568656E094576656E744E616D6506
+            094F6E47657454657874074576656E74494402350001060F5472614576656E74
+            48616E646C65720B50726F6772616D4E616D65061544424672656977696C6C69
+            674F6E476574546578740B50726F6772616D54797065070B747450726F636564
+            75726506536F75726365066870726F6365647572652044424672656977696C6C
+            69674F6E476574546578742876617220546578743A20537472696E67293B0D0A
+            626567696E0D0A0D0A20202020696620746578743D272D27207468656E205465
+            7874203A3D202027273B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E61
+            6D65060C44424672656977696C6C6967094576656E744E616D6506094F6E4765
+            7454657874074576656E74494402350000}
+        end
+        object ppDesignLayers3: TppDesignLayers
+          object ppDesignLayer3: TppDesignLayer
+            UserName = 'BandLayer5'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppSubReport3: TppSubReport
+      UserName = 'SR_Abiturfach3'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentPrinterSetup = False
+      ParentWidth = False
+      TraverseAllData = False
+      DataPipelineName = 'plAbifaecher'
+      mmHeight = 5000
+      mmLeft = 73819
+      mmTop = 10000
+      mmWidth = 73290
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport3: TppChildReport
+        AutoStop = False
+        DataPipeline = dmPipelines.plAbifaecher
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_ASGSG_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '14.08'
+        mmColumnWidth = 0
+        DataPipelineName = 'plAbifaecher'
+        object ppTitleBand3: TppTitleBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppDetailBand4: TppDetailBand
+          Visible = False
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 5000
+          mmPrintPosition = 0
+          object ppLabel20: TppLabel
+            UserName = 'Nummer'
+            AutoSize = False
+            Caption = '1'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3598
+            mmLeft = 265
+            mmTop = 0
+            mmWidth = 5292
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText6: TppDBText
+            UserName = 'Abifach'
+            DataField = 'FachKrz'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4022
+            mmLeft = 8000
+            mmTop = 0
+            mmWidth = 6085
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText13: TppDBText
+            UserName = 'Pruefpunkte'
+            DataField = 'AbiPruefErgebnis'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4586
+            mmLeft = 33073
+            mmTop = 0
+            mmWidth = 10054
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText14: TppDBText
+            UserName = 'DBBestehen'
+            DataField = 'MdlBestPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 55563
+            mmTop = 0
+            mmWidth = 5821
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText15: TppDBText
+            UserName = 'DBDurchschnitt'
+            DataField = 'Durchschnitt'
+            DataPipeline = dmPipelines.plAbifaecher
+            DisplayFormat = '#,0.00;-#,0.00'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4487
+            mmLeft = 20000
+            mmTop = 0
+            mmWidth = 12700
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText17: TppDBText
+            UserName = 'DBFreiwillig'
+            DataField = 'MdlFreiwPruefung'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 7144
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLabel21: TppLabel
+            UserName = 'LaAbw'
+            Caption = '  '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 64000
+            mmTop = 0
+            mmWidth = 8000
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLabel22: TppLabel
+            UserName = 'LaErgeb'
+            Caption = 'LaErgeb'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 4498
+            mmLeft = 45773
+            mmTop = 0
+            mmWidth = 7673
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText18: TppDBText
+            UserName = 'DBLeh'
+            DataField = 'Fachlehrer'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 92604
+            mmTop = 0
+            mmWidth = 7408
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLabel23: TppLabel
+            UserName = 'LaLeh'
+            Caption = 'Leh'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3260
+            mmLeft = 14887
+            mmTop = 500
+            mmWidth = 4699
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine24: TppLine
+            UserName = 'Line3'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine25: TppLine
+            UserName = 'Line4'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 20638
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine26: TppLine
+            UserName = 'Line5'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 34660
+            mmTop = 0
+            mmWidth = 265
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine27: TppLine
+            UserName = 'Line6'
+            ParentHeight = True
+            Position = lpLeft
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 43921
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine28: TppLine
+            UserName = 'Line7'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 6615
+            mmTop = 0
+            mmWidth = 2910
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine29: TppLine
+            UserName = 'Line8'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 54240
+            mmTop = 0
+            mmWidth = 1058
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine30: TppLine
+            UserName = 'Line9'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 62706
+            mmTop = 0
+            mmWidth = 2117
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine31: TppLine
+            UserName = 'Line10'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 73554
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine32: TppLine
+            UserName = 'Line11'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5000
+            mmLeft = 81000
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine33: TppLine
+            UserName = 'Line13'
+            Pen.Style = psDot
+            Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 1588
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 81000
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppDBText34: TppDBText
+            UserName = 'DBPrueffolge'
+            DataField = 'MdlPruefFolge'
+            DataPipeline = dmPipelines.plAbifaecher
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 11
+            Font.Style = []
+            TextAlignment = taCentered
+            Transparent = True
+            DataPipelineName = 'plAbifaecher'
+            mmHeight = 4498
+            mmLeft = 82000
+            mmTop = 0
+            mmWidth = 5000
+            BandType = 4
+            LayerName = BandLayer6
+          end
+          object ppLine50: TppLine
+            UserName = 'Line50'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 5027
+            mmLeft = 88900
+            mmTop = 0
+            mmWidth = 3969
+            BandType = 4
+            LayerName = BandLayer6
+          end
+        end
+        object ppSummaryBand4: TppSummaryBand
+          Background.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object raCodeModule4: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+            44657461696C4265666F72655072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F7572636506D070726F63656475726520446574
+            61696C4265666F72655072696E743B0D0A626567696E0D0A202044657461696C
+            2E56697369626C65203A3D2020416269666165636865725B2741626946616368
+            275D203D202733273B0D0A20206162335F755F32353A3D2066616C73653B0D0A
+            20206966207033203C203235207468656E206162335F755F32353A3D20747275
+            653B0D0A656E643B202020202020202020202020202020202020202020202020
+            2020202020202020202020202020202020202020202020202020202020202020
+            200D0A0D436F6D706F6E656E744E616D65060644657461696C094576656E744E
+            616D65060B4265666F72655072696E74074576656E74494402180001060F5472
+            614576656E7448616E646C65720B50726F6772616D4E616D6506104162696661
+            63684F6E476574546578740B50726F6772616D54797065070B747450726F6365
+            6475726506536F757263650C3504000070726F63656475726520416269666163
+            684F6E476574546578742876617220546578743A20537472696E67293B0D0A56
+            41520D0A2020617573676162653A20737472696E673B0D0A626567696E0D0A20
+            20696620416269666165636865725B2741626946616368275D203D2027332720
+            7468656E20626567696E0D0A202020206E756D6D65722E746578743A3D202041
+            6269666165636865725B2741626946616368275D3B0D0A202020206966207072
+            75656670756E6B74652E746578743D2727207468656E20707266657267333A3D
+            2D310D0A202020202020656C736520707266657267333A3D20737472746F696E
+            7428416269666165636865725B27416269507275656645726765626E6973275D
+            293B0D0A2020202069662070726665726733203E2D31207468656E2062656769
+            6E0D0A20202020202069662028284162697475725B27424C4C5F417274275D3D
+            27452729206F7220284162697475725B27424C4C5F417274275D3D2750272929
+            207468656E2070333A3D20342A7072666572673320656C73652070333A3D2035
+            2A707266657267333B0D0A20202020202061627765696368756E675F62657265
+            63686E656E28416269666165636865725B2744757263687363686E697474275D
+            2C416269666165636865725B27416269507275656645726765626E6973275D2C
+            616277332C61757367616265293B0D0A2020202020204C614162772E74657874
+            3A3D20617573676162653B0D0A2020202020206C6165726765622E746578743A
+            3D20696E74746F737472287033293B2020202020202020202020202020202020
+            2020202020202020202020202020202020202020202020202020200D0A202020
+            2020206C616C65682E746578743A3D202728272B64626C65682E746578742B27
+            29273B0D0A202020202020646264757263687363686E6974742E746578743A3D
+            20466F726D6174466C6F6174282730302E3030272C416269666165636865725B
+            2744757263687363686E697474275D293B0D0A20202020202069662041626966
+            6165636865725B276D646C426573745072756566756E67275D3D272B27207468
+            656E206D69745F7072756566756E673A3D20747275653B0D0A20202020202069
+            6620416269666165636865725B276D646C50666C696368745072756566756E67
+            275D3D272B27207468656E206D69745F7072756566756E673A3D20747275653B
+            200D0A202020202020696620416269666165636865725B276D646C6672656977
+            5072756566756E67275D3D272B27207468656E206D69745F7072756566756E67
+            3A3D20747275653B0D0A20202020656E640D0A20202020656C73652062656769
+            6E0D0A2020202020206C6165726765622E746578743A3D20273F3F273B200D0A
+            20202020202070323A3D2D313B200D0A202020202020646174656E6665686C65
+            723A3D747275653B0D0A20202020656E643B2020200D0A2020656E643B0D0A65
+            6E643B0D0A0D436F6D706F6E656E744E616D6506074162696661636809457665
+            6E744E616D6506094F6E47657454657874074576656E74494402350001060F54
+            72614576656E7448616E646C65720B50726F6772616D4E616D65061450727565
+            6670756E6B74654F6E476574546578740B50726F6772616D54797065070B7474
+            50726F63656475726506536F7572636506BB70726F6365647572652050727565
+            6670756E6B74654F6E476574546578742876617220546578743A20537472696E
+            67293B0D0A626567696E0D0A202069662054657874203C3E202727207468656E
+            0D0A2020202054657874203A3D20466F726D6174466C6F617428273023272C41
+            6269666165636865725B27416269507275656645726765626E6973275D293B0D
+            0A656E643B202020202020202020202020202020202020202020202020202020
+            20202020202020202020200D0A0D436F6D706F6E656E744E616D65060B507275
+            656670756E6B7465094576656E744E616D6506094F6E47657454657874074576
+            656E74494402350001060F5472614576656E7448616E646C65720B50726F6772
+            616D4E616D6506115265706F72744F6E456E64436F6C756D6E0B50726F677261
+            6D54797065070B747450726F63656475726506536F75726365062D70726F6365
+            64757265205265706F72744F6E456E64436F6C756D6E3B0D0A626567696E0D0A
+            0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265706F72740945
+            76656E744E616D65060B4F6E456E64436F6C756D6E074576656E744944020F00
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650615
+            53525F41626974757266616368314F6E5072696E740B50726F6772616D547970
+            65070B747450726F63656475726506536F75726365062F70726F636564757265
+            2053525F41626974757266616368314F6E5072696E743B0D0A626567696E0D0A
+            656E643B0D0A0D436F6D706F6E656E744E616D65060E53525F41626974757266
+            61636831094576656E744E616D6506074F6E5072696E74074576656E74494402
+            200001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+            06134442426573746568656E4F6E476574546578740B50726F6772616D547970
+            65070B747450726F63656475726506536F75726365066370726F636564757265
+            204442426573746568656E4F6E476574546578742876617220546578743A2053
+            7472696E67293B0D0A626567696E0D0A0D0A2020496620746578743D272D2720
+            7468656E2054657874203A3D27273B200D0A0D0A656E643B0D0A0D436F6D706F
+            6E656E744E616D65060A4442426573746568656E094576656E744E616D650609
+            4F6E47657454657874074576656E74494402350001060F5472614576656E7448
+            616E646C65720B50726F6772616D4E616D65061544424672656977696C6C6967
+            4F6E476574546578740B50726F6772616D54797065070B747450726F63656475
+            726506536F75726365066670726F6365647572652044424672656977696C6C69
+            674F6E476574546578742876617220546578743A20537472696E67293B0D0A62
+            6567696E0D0A0D0A2020696620746578743D272D27207468656E205465787420
+            3A3D202027273B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506
+            0C44424672656977696C6C6967094576656E744E616D6506094F6E4765745465
+            7874074576656E74494402350000}
+        end
+        object ppDesignLayers4: TppDesignLayers
+          object ppDesignLayer4: TppDesignLayer
+            UserName = 'BandLayer6'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppLine13: TppLine
+      UserName = 'Line13'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 20638
+      mmLeft = 175155
+      mmTop = 0
+      mmWidth = 3969
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppSubReport5: TppSubReport
+      UserName = 'SR_Auswertung'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentWidth = False
+      TraverseAllData = False
+      mmHeight = 11642
+      mmLeft = 164042
+      mmTop = 6879
+      mmWidth = 35190
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport5: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_mit_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '14.08'
+        mmColumnWidth = 0
+        object ppDetailBand6: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 6085
+          mmPrintPosition = 0
+          object ppLabel1: TppLabel
+            UserName = 'La100'
+            Caption = '< 100'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            Visible = False
+            mmHeight = 4191
+            mmLeft = 529
+            mmTop = 1000
+            mmWidth = 8848
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppLabel9: TppLabel
+            UserName = 'LaP25'
+            Caption = 'P25'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            Visible = False
+            mmHeight = 4191
+            mmLeft = 13494
+            mmTop = 1000
+            mmWidth = 6223
+            BandType = 4
+            LayerName = Foreground1
+          end
+          object ppLabel36: TppLabel
+            UserName = 'LaMeldung'
+            Caption = 'F'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 14
+            Font.Style = [fsBold]
+            TextAlignment = taCentered
+            Transparent = True
+            mmHeight = 5821
+            mmLeft = 24871
+            mmTop = 264
+            mmWidth = 2910
+            BandType = 4
+            LayerName = Foreground1
+          end
+        end
+        object raCodeModule6: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650611
+            44657461696C4265666F72655072696E740B50726F6772616D54797065070B74
+            7450726F63656475726506536F757263650C4603000070726F63656475726520
+            44657461696C4265666F72655072696E743B0D0A626567696E0D0A202F2F206D
+            69745F7072756566756E673A3D2066616C73653B0D0A20206C613130302E7669
+            7369626C653A3D2066616C73653B200D0A20206C617032352E76697369626C65
+            3A3D2066616C73653B0D0A202069662070312B70322B70332B7034203C203130
+            30207468656E20626567696E0D0A202020206C613130302E76697369626C653A
+            3D20747275653B0D0A202020206C613130302E746578743A3D696E74746F7374
+            722870312B70322B70332B7034292B2720502E273B0D0A202020206D69745F70
+            72756566756E673A3D20747275653B0D0A2020656E643B0D0A20207032353A3D
+            2066616C73653B0D0A20206966206C6B315F755F3235207468656E2062656769
+            6E0D0A202020206966206C6B325F755F3235206F7220286162335F755F323520
+            616E64206162345F755F323529207468656E207032353A3D20747275653B0D0A
+            2020656E640D0A2020656C73650D0A202020206966206C6B325F755F32352061
+            6E64206162335F755F323520616E64206162345F755F3235207468656E207032
+            353A3D20747275653B0D0A2020696620286C6B315F755F323520616E64206C6B
+            325F755F323529207468656E206C615032352E746578743A3D276B2E4C4B2720
+            656C7365206C615032352E746578743A3D27322E4B2E273B20200D0A20206966
+            20703235207468656E206C615032352E76697369626C653A3D20747275653B0D
+            0A2020696620703235207468656E206D69745F7072756566756E673A3D207472
+            75653B0D0A20206C616D656C64756E672E76697369626C653A3D66616C73653B
+            0D0A2020696620646174656E6665686C6572207468656E20626567696E0D0A20
+            2020206C616D656C64756E672E746578743A3D202746273B0D0A202020206C61
+            3130302E76697369626C653A3D2066616C73653B0D0A202020206C615032352E
+            76697369626C653A3D2066616C73653B0D0A2020656E640D0A2020656C736520
+            6C616D656C64756E672E746578743A3D2750273B0D0A20206966206D69745F70
+            72756566756E67206F7220646174656E6665686C6572207468656E206C616D65
+            6C64756E672E76697369626C653A3D747275653B0D0A656E643B0D0A0D436F6D
+            706F6E656E744E616D65060644657461696C094576656E744E616D65060B4265
+            666F72655072696E74074576656E74494402180001060F5472614576656E7448
+            616E646C65720B50726F6772616D4E616D65061344657461696C416674657247
+            656E65726174650B50726F6772616D54797065070B747450726F636564757265
+            06536F75726365064570726F6365647572652044657461696C41667465724765
+            6E65726174653B0D0A626567696E0D0A2020646174656E6665686C65723A3D20
+            66616C73653B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506064465
+            7461696C094576656E744E616D65060D416674657247656E6572617465074576
+            656E74494402190000}
+        end
+        object ppDesignLayers7: TppDesignLayers
+          object ppDesignLayer7: TppDesignLayer
+            UserName = 'Foreground1'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppLine45: TppLine
+      UserName = 'Line45'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 20638
+      mmLeft = 185209
+      mmTop = 0
+      mmWidth = 5027
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppSubReport6: TppSubReport
+      UserName = 'SR_Gesamt'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      ParentWidth = False
+      TraverseAllData = False
+      mmHeight = 13494
+      mmLeft = 16140
+      mmTop = 6879
+      mmWidth = 53711
+      BandType = 4
+      LayerName = Foreground
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport6: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Uebersicht_ZAA2_Ergebnisse_u_Nachpruefungen_P_mit_BLL.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 4000
+        PrinterSetup.mmMarginRight = 3350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Template.Format = ftASCII
+        Units = utMillimeters
+        Version = '14.08'
+        mmColumnWidth = 0
+        object ppDetailBand7: TppDetailBand
+          Background1.Brush.Style = bsClear
+          Background2.Brush.Style = bsClear
+          mmBottomOffset = 0
+          mmHeight = 13229
+          mmPrintPosition = 0
+          object ppLabel14: TppLabel
+            UserName = 'Label14'
+            Caption = 'Qualifk.:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 2117
+            mmTop = 0
+            mmWidth = 13229
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppDBText5: TppDBText
+            UserName = 'DBPunktsummeI'
+            DataField = 'Punktsumme_I'
+            DataPipeline = dmPipelines.plAbi
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbi'
+            mmHeight = 4233
+            mmLeft = 16140
+            mmTop = 0
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel28: TppLabel
+            UserName = 'Label28'
+            Caption = 'Abitur:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 2117
+            mmTop = 4498
+            mmWidth = 11377
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel29: TppLabel
+            UserName = 'Label29'
+            Caption = 'Gesamt:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 2117
+            mmTop = 8996
+            mmWidth = 13229
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppDBText27: TppDBText
+            UserName = 'DBAbitursumme'
+            DataField = 'Punktsumme_II'
+            DataPipeline = dmPipelines.plAbi
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbi'
+            mmHeight = 4233
+            mmLeft = 16140
+            mmTop = 4498
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppDBText28: TppDBText
+            UserName = 'DBGesamt'
+            DataField = 'GesamtPunktzahl'
+            DataPipeline = dmPipelines.plAbi
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbi'
+            mmHeight = 3704
+            mmLeft = 16140
+            mmTop = 8996
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel30: TppLabel
+            UserName = 'Label30'
+            Caption = 'vorl. Note:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 26194
+            mmTop = 0
+            mmWidth = 17463
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel31: TppLabel
+            UserName = 'Label31'
+            Caption = 'Differenz:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 26194
+            mmTop = 8996
+            mmWidth = 15081
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppDBText29: TppDBText
+            UserName = 'DBNote'
+            DataField = 'Note'
+            DataPipeline = dmPipelines.plAbi
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = [fsBold]
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbi'
+            mmHeight = 4233
+            mmLeft = 43127
+            mmTop = 0
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppDBText30: TppDBText
+            UserName = 'DBNotensprung'
+            DataField = 'Notensprung'
+            DataPipeline = dmPipelines.plAbi
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            TextAlignment = taRightJustified
+            Transparent = True
+            DataPipelineName = 'plAbi'
+            mmHeight = 3704
+            mmLeft = 43127
+            mmTop = 4498
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel32: TppLabel
+            UserName = 'Label32'
+            Caption = 'Notenspr.:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 10
+            Font.Style = []
+            Transparent = True
+            mmHeight = 4233
+            mmLeft = 26194
+            mmTop = 4498
+            mmWidth = 16140
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel33: TppLabel
+            UserName = 'LaDifferenz'
+            Caption = 'LaD'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            TextAlignment = taRightJustified
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 43127
+            mmTop = 8996
+            mmWidth = 6879
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLine1: TppLine
+            UserName = 'Line1'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 13229
+            mmLeft = 24342
+            mmTop = 0
+            mmWidth = 2381
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLine44: TppLine
+            UserName = 'Line44'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 13229
+            mmLeft = 50800
+            mmTop = 0
+            mmWidth = 1852
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLine46: TppLine
+            UserName = 'Line46'
+            ParentHeight = True
+            Position = lpLeft
+            Weight = 0.750000000000000000
+            mmHeight = 13229
+            mmLeft = 1058
+            mmTop = 0
+            mmWidth = 2646
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel37: TppLabel
+            UserName = 'Label37'
+            Caption = 'BLL'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold, fsItalic]
+            Transparent = True
+            mmHeight = 3683
+            mmLeft = 52652
+            mmTop = 0
+            mmWidth = 6181
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel39: TppLabel
+            UserName = 'Label39'
+            Caption = 'BLL Punkte'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsItalic]
+            Transparent = True
+            mmHeight = 3641
+            mmLeft = 52652
+            mmTop = 4498
+            mmWidth = 16468
+            BandType = 4
+            LayerName = Foreground4
+          end
+          object ppLabel40: TppLabel
+            UserName = 'Label40'
+            Caption = 'BLL Punkte'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold, fsItalic]
+            Transparent = True
+            mmHeight = 3683
+            mmLeft = 52652
+            mmTop = 8731
+            mmWidth = 17653
+            BandType = 4
+            LayerName = Foreground4
+          end
+        end
+        object raCodeModule7: TraCodeModule
+          ProgramStream = {
+            01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650614
+            4C61446966666572656E7A4F6E476574546578740B50726F6772616D54797065
+            070B747450726F63656475726506536F7572636506D170726F63656475726520
+            4C61446966666572656E7A4F6E476574546578742876617220546578743A2053
+            7472696E67293B0D0A5661720D0A20207370722C206765733A20696E74656765
+            723B0D0A626567696E0D0A20207370723A3D20737472746F696E742861626974
+            75725B274E6F74656E737072756E67275D293B0D0A20206765733A3D20737472
+            746F696E74286162697475725B27476573616D7470756E6B747A61686C275D29
+            3B0D0A202054657874203A3D20696E74746F737472287370722D676573293B0D
+            0A656E643B0D0A0D436F6D706F6E656E744E616D65060B4C6144696666657265
+            6E7A094576656E744E616D6506094F6E47657454657874074576656E74494402
+            350001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+            06104C6162656C33374F6E476574546578740B50726F6772616D54797065070B
+            747450726F63656475726506536F75726365069C70726F636564757265204C61
+            62656C33374F6E476574546578742876617220546578743A20537472696E6729
+            3B0D0A626567696E0D0A0D0A202049662028284162697475725B27424C4C5F41
+            7274275D3D27452729206F7220284162697475725B27424C4C5F417274275D3D
+            2750272929207468656E2054657874203A3D27424C4C2720656C736520746578
+            743A3D27273B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650607
+            4C6162656C3337094576656E744E616D6506094F6E4765745465787407457665
+            6E74494402350001060F5472614576656E7448616E646C65720B50726F677261
+            6D4E616D6506104C6162656C33394F6E476574546578740B50726F6772616D54
+            797065070B747450726F63656475726506536F7572636506C070726F63656475
+            7265204C6162656C33394F6E476574546578742876617220546578743A205374
+            72696E67293B0D0A626567696E0D0A0D0A202069662028284162697475725B27
+            424C4C5F417274275D3D27452729206F7220284162697475725B27424C4C5F41
+            7274275D3D2750272929200D0A202020207468656E2054657874203A3D696E74
+            746F737472284162697475725B27424C4C5F50756E6B7465275D290D0A202020
+            20656C736520546578743A3D27273B0D0A0D0A656E643B0D0A0D436F6D706F6E
+            656E744E616D6506074C6162656C3339094576656E744E616D6506094F6E4765
+            7454657874074576656E74494402350001060F5472614576656E7448616E646C
+            65720B50726F6772616D4E616D6506104C6162656C34304F6E47657454657874
+            0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+            06C170726F636564757265204C6162656C34304F6E4765745465787428766172
+            20546578743A20537472696E67293B0D0A626567696E0D0A0D0A206966202828
+            4162697475725B27424C4C5F417274275D3D27452729206F7220284162697475
+            725B27424C4C5F417274275D3D2750272929200D0A202020207468656E205465
+            7874203A3D696E74746F737472284162697475725B27424C4C5F50756E6B7465
+            275D2A34290D0A20202020656C736520546578743A3D27273B0D0A0D0A656E64
+            3B0D0A0D436F6D706F6E656E744E616D6506074C6162656C3430094576656E74
+            4E616D6506094F6E47657454657874074576656E74494402350000}
+        end
+        object ppDesignLayers8: TppDesignLayers
+          object ppDesignLayer8: TppDesignLayer
+            UserName = 'Foreground4'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+    object ppLine14: TppLine
+      UserName = 'Line14'
+      Weight = 0.750000000000000000
+      mmHeight = 265
+      mmLeft = 6615
+      mmTop = 20373
+      mmWidth = 187590
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine52: TppLine
+      UserName = 'Line52'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.750000000000000000
+      mmHeight = 20638
+      mmLeft = 193940
+      mmTop = 0
+      mmWidth = 12965
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand2: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5292
+    mmPrintPosition = 0
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable2'
+      VarType = vtPageSetDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 76729
+      mmTop = 2000
+      mmWidth = 16669
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppLine47: TppLine
+      UserName = 'Line47'
+      ParentWidth = True
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 0
+      mmTop = 265
+      mmWidth = 202650
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable1'
+      VarType = vtDocumentName
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 117211
+      mmTop = 2000
+      mmWidth = 71702
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'SystemVariable3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 6615
+      mmTop = 2000
+      mmWidth = 14023
+      BandType = 8
+      LayerName = Foreground
+    end
+    object ppLabel27: TppLabel
+      UserName = 'LaStand'
+      Caption = 'LaStand'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'MS Sans Serif'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3260
+      mmLeft = 37084
+      mmTop = 1588
+      mmWidth = 10541
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppSummaryBand3: TppSummaryBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppPageStyle1: TppPageStyle
+    Background.Brush.Style = bsClear
+    EndPage = 0
+    SinglePage = 0
+    StartPage = 0
+    mmBottomOffset = 0
+    mmHeight = 284300
+    mmPrintPosition = 0
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'Klasse'
+    DataPipeline = dmPipelines.Schueler
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    ReprintOnSubsequentPage = False
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Schueler'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule2: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F7572636514ED07000070726F6365647572
+      65205661726961626C65733B0D0A7661720D0A20206175737761686C3A207374
+      72696E673B200D0A2020200D0A20207066616368312C207066616368322C2070
+      66616368333A202020202020202020202020202020202020737472696E673B20
+      20207B42657A656963686E756E67206465722046C3A46368657220646572206D
+      646C2E205072C3BC66756E67656E7D0D0A202070312C2070322C2070332C2070
+      343A2020202020202020202020202020202020202020202020202020696E7465
+      6765723B20207B5072C3BC66756E677370756E6B746520646572207669657220
+      41626974757266C3A4636865727D0D0A20206C6B317072662C206C6B32707266
+      2C206C6B7072662C206162337072667B2C206D646C7072667D3A20626F6F6C65
+      616E3B20207B5A656967657220617566205072C3BC66756E67656E7D0D0A2020
+      5374616E643A2020202020202020202020202020202020202020202020202020
+      202020202020202020737472696E673B2020207B41757367616265646174756D
+      7D0D0A20207A662C20507275656673756D6D653A202020202020202020202020
+      2020202020202020202020202020696E74656765723B20207B5A61686C206465
+      72205072C3BC66756E67656E20756E7465722032352C2053756D6D6520646572
+      205072C3BC66756E677370756E6B74657D0D0A202064312C2064322C2064333A
+      202020202020202020202020202020202020202020202020202020202020696E
+      74656765723B20207B6D6178696D616C206DC3B6676C69636865205665726C75
+      737470756E6B746520696E2065696E656D206D646C2E205072C3BC66756E6773
+      666163687D200D0A202070727565666D696E75733A2020202020202020202020
+      20202020202020202020202020202020202020626F6F6C65616E3B20207B5A65
+      6967657220617566206DC3B6676C6963686520476566C3A4687264756E672064
+      657320426573746568656E73206475726368206D646C2E205072C3BC66756E67
+      656E7D0D0A20207A696666312C207A696666323A202020202020202020202020
+      20202020202020202020202020202020626F6F6C65616E3B20207B5A65696765
+      7220617566206D646C2E205072C3BC66756E67656E206E616368205A69666665
+      72203120627A772E20327D0D0A202061626465636B2C2061645F616C6C673A20
+      202020202020202020202020202020202020202020202020626F6F6C65616E3B
+      20207B5A65696765722066C3BC722041626465636B756E6720C3BC626572666C
+      C3BC73736967657220496E666F726D6174696F6E656E3B2065696E7A656C6E20
+      2D20616C6C67656D65696E297D0D0A202061643A202020202020202020202020
+      2020202020202020202020202020202020202020202020202020696E74656765
+      723B20207B5AC3A4686C65722066C3BC7220416E7A61686C206DC3BC6E646C69
+      636865722050666C696368747072C3BC66756E67656E3B207374657565727420
+      41626465636B756E677D0D0A0D0A2F2F4B430D0A0D0A2020616277312C616277
+      322C616277333A20202020202020202020202020202020202020202020202020
+      20626F6F6C65616E3B20207B41627765696368756E6720766F6D204E6F74656E
+      64757263687363686E6974747D200D0A20206C6B315F755F32352C206C6B325F
+      755F32352C206162335F755F32352C206162345F755F32353A2020626F6F6C65
+      616E3B20207B5072C3BC66756E677365726765626E6973736520756E74657220
+      32352050756E6B74656E7D0D0A20207032353A20202020202020202020202020
+      202020202020202020202020202020202020202020202020626F6F6C65616E3B
+      20207B32352050756E6B746520696E20322046C3A4636865726E202864617665
+      6E206D696E642E2031204C4B29206E69636874206572726569636874207D0D0A
+      20206E6F65746967312C206E6F65746967322C206E6F65746967333A20202020
+      2020202020202020202020696E74656765723B20207B6E6F7477656E64696765
+      2050756E6B74652066C3BC722032352050756E6B746520696D206A657765696C
+      6967656E206DC3BC6E646C2E205072C3BC66756E6773666163687D0D0A20206E
+      6F65746967315F617573676162652C200D0A20206E6F65746967325F61757367
+      6162652C0D0A20206E6F65746967335F617573676162653A2020202020202020
+      2020202020202020202020202020202020737472696E673B202020207B417573
+      67616265206E6F7477656E646967652050756E6B74652066C3BC722032352050
+      756E6B746520696D206A657765696C6967656E206DC3BC6E646C2E205072C3BC
+      66756E6773666163687D0D0A20206D69745F7072756566756E673A2020202020
+      2020202020202020202020202020202020202020202020626F6F6C65616E3B20
+      20207B536368C3BC6C6572206F686E65205072C3BC66756E67656E20736F6C6C
+      74656E207761686C776569736520C3BC626572737072756E67656E2077657264
+      656E2C206E69636874206665727469677D0D0A2020707266657267312C707266
+      657267322C707266657267332C707266657267343A202020202020202020696E
+      74656765723B2020207B5072C3BC66756E677365726765626E69737365206465
+      72206269736865726967656E205072C3BC66756E67656E207D0D0A2020646174
+      656E6665686C65723A2020202020202020202020202020202020202020202020
+      202020202020626F6F6C65616E3B0D0A20200D0A0D0A626567696E0D0A0D0A65
+      6E643B0D0A0001060A54726150726F6772616D094368696C645479706502130B
+      50726F6772616D4E616D65060E476C6F62616C4F6E4372656174650B50726F67
+      72616D54797065070B747450726F63656475726506536F75726365062870726F
+      63656475726520476C6F62616C4F6E4372656174653B0D0A626567696E0D0A65
+      6E643B0D0A0001060A54726150726F6772616D094368696C645479706502140B
+      50726F6772616D4E616D65060F476C6F62616C4F6E44657374726F790B50726F
+      6772616D54797065070B747450726F63656475726506536F7572636506297072
+      6F63656475726520476C6F62616C4F6E44657374726F793B0D0A626567696E0D
+      0A656E643B0D0A0001060A54726150726F6772616D094368696C645479706502
+      150B50726F6772616D4E616D65061461627765696368756E675F626572656368
+      6E656E0B50726F6772616D54797065070B747450726F63656475726506536F75
+      7263650C8201000070726F6365647572652061627765696368756E675F626572
+      6563686E656E2864757263687363682C207072663A657874656E6465643B2056
+      415220706162773A20626F6F6C65616E3B2056415220617573676162653A7374
+      72696E67293B0D0A626567696E20200D0A2020617573676162653A3D27273B0D
+      0A20206966207072663E3D307468656E20626567696E0D0A2020202070616277
+      3A3D2066616C73653B200D0A20202020696620287072663E3D28647572636873
+      63682B342929207468656E20626567696E0D0A20202020202061757367616265
+      3A3D2741202B273B0D0A202020202020706162773A3D20747275653B0D0A2020
+      2020656E6420202020200D0A20202020656C73650D0A20202020202069662028
+      7072663C3D2864757263687363682D342929207468656E20626567696E0D0A20
+      20202020202020617573676162653A3D2741202D273B0D0A2020202020202020
+      706162773A3D20747275653B0D0A202020202020656E643B0D0A20202020656E
+      643B0D0A656E643B0D0A0001060F5472614576656E7448616E646C65720B5072
+      6F6772616D4E616D6506115265706F72744265666F72655072696E740B50726F
+      6772616D54797065070B747450726F63656475726506536F7572636506B07072
+      6F636564757265205265706F72744265666F72655072696E743B0D0A62656769
+      6E0D0A207365746162697475722874727565293B200D0A205374616E64203A3D
+      20537472696E67496E70757428275374616E6420646572204175736761626520
+      28446174756D293A20272C2044617465546F5374722843757272656E74446174
+      6529293B0D0A206C617374616E642E746578743A3D20275374616E643A20272B
+      7374616E643B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265
+      706F7274094576656E744E616D65060B4265666F72655072696E74074576656E
+      74494402010001060F5472614576656E7448616E646C65720B50726F6772616D
+      4E616D6506105265706F727441667465725072696E740B50726F6772616D5479
+      7065070B747450726F63656475726506536F75726365067370726F6365647572
+      65205265706F727441667465725072696E743B0D0A626567696E0D0A20736574
+      6162697475722866616C7365293B0D0A2070313A3D303B0D0A2070323A3D303B
+      0D0A2070333A3D303B0D0A2070343A3D303B0D0A20707275656673756D6D653A
+      3D303B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265706F72
+      74094576656E744E616D65060A41667465725072696E74074576656E74494402
+      000001060F5472614576656E7448616E646C65720B50726F6772616D4E616D65
+      061144657461696C4265666F72655072696E740B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365064870726F6365647572652044
+      657461696C4265666F72655072696E743B0D0A626567696E0D0A20202F2F6966
+      206F686E655F7072756566756E67207468656E203B0D0A656E643B0D0A0D436F
+      6D706F6E656E744E616D65060644657461696C094576656E744E616D65060B42
+      65666F72655072696E74074576656E74494402180001060F5472614576656E74
+      48616E646C65720B50726F6772616D4E616D65061344657461696C4166746572
+      47656E65726174650B50726F6772616D54797065070B747450726F6365647572
+      6506536F75726365066A70726F6365647572652044657461696C416674657247
+      656E65726174653B0D0A626567696E0D0A202F2F20206F686E655F7072756566
+      756E673A3D20747275653B0D0A202F2F2020206C616E722E746578743A3D2064
+      6263616C63312E746578743B0D0A656E643B0D0A0D436F6D706F6E656E744E61
+      6D65060644657461696C094576656E744E616D65060D416674657247656E6572
+      617465074576656E74494402190001060F5472614576656E7448616E646C6572
+      0B50726F6772616D4E616D65061044657461696C41667465725072696E740B50
+      726F6772616D54797065070B747450726F63656475726506536F757263650643
+      70726F6365647572652044657461696C41667465725072696E743B0D0A626567
+      696E0D0A20206D69745F7072756566756E673A3D2066616C73653B0D0A656E64
+      3B0D0A0D436F6D706F6E656E744E616D65060644657461696C094576656E744E
+      616D65060A41667465725072696E74074576656E74494402170001060F547261
+      4576656E7448616E646C65720B50726F6772616D4E616D650615537562526570
+      6F72745F416269344F6E5072696E740B50726F6772616D54797065070B747450
+      726F63656475726506536F75726365063170726F636564757265205375625265
+      706F72745F416269344F6E5072696E743B0D0A626567696E0D0A0D0A656E643B
+      0D0A0D436F6D706F6E656E744E616D65060E5375625265706F72745F41626934
+      094576656E744E616D6506074F6E5072696E74074576656E74494402200000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer6: TppDesignLayer
+      UserName = 'PageLayer1'
+      LayerType = ltPage
+      Index = 0
+    end
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 1
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object ppArchivierung: TppParameter
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = 'Schildvorgabe'
+      DataType = dtString
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = 'Schildvorgabe'
+      UserName = 'Archivierung'
+    end
+  end
+end

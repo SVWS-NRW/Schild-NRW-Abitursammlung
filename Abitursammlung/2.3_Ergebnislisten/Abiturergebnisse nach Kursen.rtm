@@ -1,0 +1,965 @@
+object Report: TppReport
+  OnFileDeviceCreate = ReportFileDeviceCreate
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+  OnStartFirstPass = ReportStartFirstPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Kurslisten_mit_Abiturergebnissen_AB1_AB2_AB3_N_oder_P.rtm'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 30000
+  PrinterSetup.mmMarginRight = 50000
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.FileName = 'C:\SchILD-NRW\SchILD-Reports\ASGSG-Reports\ab_2014\Abitur\Sonstiges (mdl_1-4)\Kurslisten_mit_Abiturergebnissen_AB1_AB2_AB3_N_oder_P.rtm'
+  Template.Format = ftASCII
+  Units = utMillimeters
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforeOpenDataPipelines = ReportBeforeOpenDataPipelines
+  BeforePrint = ReportBeforePrint
+  BeforeEmail = ReportBeforeEmail
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  EmailSettings.Enabled = True
+  LanguageID = 'Default'
+  OnInitializeParameters = ReportInitializeParameters
+  OnPreviewFormCreate = ReportPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.ZoomSetting = zs100Percent
+  PreviewFormSettings.SinglePageOnly = True
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<Suchtext>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 128
+  Top = 8
+  Version = '15.05'
+  mmColumnWidth = 0
+  DataPipelineName = 'KursPruefergebnisAbifaecher'
+  object ppHeaderBand2: TppHeaderBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 3969
+    mmPrintPosition = 0
+    object ppLabel4: TppLabel
+      UserName = 'Label1'
+      Caption = 'Schule'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 9313
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable1'
+      AutoSize = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3387
+      mmLeft = 100806
+      mmTop = 0
+      mmWidth = 22300
+      BandType = 0
+      LayerName = Foreground
+    end
+    object ppDBText32: TppDBText
+      UserName = 'DBText32'
+      AutoSize = True
+      DataField = 'Schuljahr'
+      DataPipeline = dmPipelines.EigeneSchule
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold, fsUnderline]
+      Transparent = True
+      DataPipelineName = 'EigeneSchule'
+      mmHeight = 3387
+      mmLeft = 41275
+      mmTop = 0
+      mmWidth = 12912
+      BandType = 0
+      LayerName = Foreground
+    end
+  end
+  object ppDetailBand2: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 5292
+    mmPrintPosition = 0
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      DataField = 'Kursart'
+      DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'KursPruefergebnisAbifaecher'
+      mmHeight = 3175
+      mmLeft = 100000
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      ResetGroup = ppGroup1
+      TextAlignment = taRightJustified
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'KursPruefergebnisAbifaecher'
+      mmHeight = 3175
+      mmLeft = 11377
+      mmTop = 0
+      mmWidth = 14023
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBCalc2: TppDBCalc
+      UserName = 'DBCalc2'
+      DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'KursPruefergebnisAbifaecher'
+      mmHeight = 3260
+      mmLeft = 265
+      mmTop = 0
+      mmWidth = 8000
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      AutoSize = True
+      DataField = 'Name'
+      DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'KursPruefergebnisAbifaecher'
+      mmHeight = 3260
+      mmLeft = 40746
+      mmTop = 0
+      mmWidth = 7578
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      AutoSize = True
+      DataField = 'Vorname'
+      DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'KursPruefergebnisAbifaecher'
+      mmHeight = 3260
+      mmLeft = 70000
+      mmTop = 0
+      mmWidth = 11515
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      DataField = 'AbiPruefErgebnis'
+      DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'KursPruefergebnisAbifaecher'
+      mmHeight = 3175
+      mmLeft = 105336
+      mmTop = 265
+      mmWidth = 17198
+      BandType = 4
+      LayerName = Foreground
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Pen.Style = psDot
+      ParentWidth = True
+      Position = lpBottom
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 794
+      mmWidth = 130000
+      BandType = 4
+      LayerName = Foreground
+    end
+  end
+  object ppFooterBand2: TppFooterBand
+    Background.Brush.Style = bsClear
+    mmBottomOffset = 0
+    mmHeight = 3440
+    mmPrintPosition = 0
+    object ppSystemVariable3: TppSystemVariable
+      UserName = 'SystemVariable2'
+      VarType = vtPageNoDesc
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 115623
+      mmTop = 265
+      mmWidth = 8731
+      BandType = 8
+      LayerName = Foreground
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'KurzBez'
+    DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'KursPruefergebnisAbifaecher'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 5027
+      mmPrintPosition = 0
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'KurzBez'
+        DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'KursPruefergebnisAbifaecher'
+        mmHeight = 3440
+        mmLeft = 265
+        mmTop = 0
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'LehrerKrz'
+        DataPipeline = daADOQueryDataView1.KursPruefergebnisAbifaecher
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'KursPruefergebnisAbifaecher'
+        mmHeight = 3440
+        mmLeft = 21431
+        mmTop = 0
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLine4: TppLine
+        UserName = 'Line1'
+        ParentWidth = True
+        Position = lpBottom
+        Weight = 0.750000000000000000
+        mmHeight = 2117
+        mmLeft = 0
+        mmTop = 2646
+        mmWidth = 130000
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label2'
+        Caption = 'Name'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 40746
+        mmTop = 0
+        mmWidth = 7705
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label3'
+        Caption = 'Vorname'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 70000
+        mmTop = 0
+        mmWidth = 12150
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label4'
+        Caption = 'Kursart'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 97367
+        mmTop = 0
+        mmWidth = 10033
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label5'
+        Caption = 'Label5'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3387
+        mmLeft = 116152
+        mmTop = 0
+        mmWidth = 8975
+        BandType = 3
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 2117
+      mmPrintPosition = 0
+      object ppLine5: TppLine
+        UserName = 'Line2'
+        ParentWidth = True
+        Weight = 0.750000000000000000
+        mmHeight = 2000
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 130000
+        BandType = 5
+        GroupNo = 0
+        LayerName = Foreground
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_KursPruefergebnisAbifaecher'
+      Height = 516
+      Left = 254
+      NameColumnWidth = 169
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 53
+      TypeColumnWidth = 52
+      Width = 433
+      AutoSearchTabOrder = 0
+      object KursPruefergebnisAbifaecher: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'KursPruefergebnisAbifaecher'
+        object ppField1: TppField
+          FieldAlias = 'Bezeichnung1'
+          FieldName = 'Bezeichnung1'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 0
+        end
+        object ppField2: TppField
+          FieldAlias = 'Bezeichnung2'
+          FieldName = 'Bezeichnung2'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 1
+        end
+        object ppField3: TppField
+          FieldAlias = 'Bezeichnung3'
+          FieldName = 'Bezeichnung3'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 2
+        end
+        object ppField4: TppField
+          FieldAlias = 'Strasse'
+          FieldName = 'Strasse'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 3
+        end
+        object ppField5: TppField
+          FieldAlias = 'PLZ'
+          FieldName = 'PLZ'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 4
+        end
+        object ppField6: TppField
+          FieldAlias = 'Ort'
+          FieldName = 'Ort'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 5
+        end
+        object ppField7: TppField
+          FieldAlias = 'ID'
+          FieldName = 'ID'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 6
+        end
+        object ppField8: TppField
+          FieldAlias = 'KurzBez'
+          FieldName = 'KurzBez'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 7
+        end
+        object ppField9: TppField
+          FieldAlias = 'ASDJahrgang'
+          FieldName = 'ASDJahrgang'
+          FieldLength = 2
+          DisplayWidth = 2
+          Position = 8
+        end
+        object ppField10: TppField
+          FieldAlias = 'KursartAllg'
+          FieldName = 'KursartAllg'
+          FieldLength = 5
+          DisplayWidth = 5
+          Position = 9
+        end
+        object ppField11: TppField
+          FieldAlias = 'LehrerKrz'
+          FieldName = 'LehrerKrz'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 10
+        end
+        object ppField12: TppField
+          FieldAlias = 'Sortierung'
+          FieldName = 'Sortierung'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 11
+        end
+        object ppField13: TppField
+          FieldAlias = 'Abschnitt'
+          FieldName = 'Abschnitt'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 12
+        end
+        object ppField14: TppField
+          FieldAlias = 'Kursart'
+          FieldName = 'Kursart'
+          FieldLength = 5
+          DisplayWidth = 5
+          Position = 13
+        end
+        object ppField15: TppField
+          FieldAlias = 'AbiFach'
+          FieldName = 'AbiFach'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 14
+        end
+        object ppField16: TppField
+          FieldAlias = 'Schueler_ID'
+          FieldName = 'Schueler_ID'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 15
+        end
+        object ppField17: TppField
+          FieldAlias = 'Name'
+          FieldName = 'Name'
+          FieldLength = 50
+          DisplayWidth = 50
+          Position = 16
+        end
+        object ppField18: TppField
+          FieldAlias = 'Vorname'
+          FieldName = 'Vorname'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 17
+        end
+        object ppField19: TppField
+          FieldAlias = 'FachKrz'
+          FieldName = 'FachKrz'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 18
+        end
+        object ppField20: TppField
+          FieldAlias = 'AbiFach_2'
+          FieldName = 'AbiFach_2'
+          FieldLength = 1
+          DisplayWidth = 1
+          Position = 19
+        end
+        object ppField21: TppField
+          FieldAlias = 'AbiPruefErgebnis'
+          FieldName = 'AbiPruefErgebnis'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 20
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSAccess
+        DatabaseName = 'ADOConnection'
+        DatabaseType = dtMSAccess
+        DataPipelineName = 'KursPruefergebnisAbifaecher'
+        EditSQLAsText = True
+        IsCaseSensitive = True
+        LinkColor = clMaroon
+        LinkType = ltParameterizedSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT EigeneSchule.Bezeichnung1, '
+          '       EigeneSchule.Bezeichnung2, '
+          '       EigeneSchule.Bezeichnung3, '
+          '       EigeneSchule.Strasse, EigeneSchule.PLZ, '
+          '       EigeneSchule.Ort, Kurse.ID, Kurse.KurzBez, '
+          '       Kurse.ASDJahrgang, Kurse.KursartAllg, '
+          '       Kurse.LehrerKrz, Kurse.Sortierung, '
+          '       Kurse.Abschnitt, '
+          '       SchuelerLeistungsdaten.Kursart, '
+          '       SchuelerLeistungsdaten.AbiFach, '
+          '       SchuelerLernabschnittsdaten.Schueler_ID, '
+          '       Schueler.Name, Schueler.Vorname, '
+          '       SchuelerAbiFaecher.FachKrz, '
+          '       SchuelerAbiFaecher.AbiFach AS AbiFach_2, '
+          '       SchuelerAbiFaecher.AbiPruefErgebnis'
+          'FROM EigeneSchule EigeneSchule, Kurse Kurse'
+          '     , SchuelerLeistungsdaten SchuelerLeistungsdaten'
+          '     , SchuelerLernabschnittsdaten SchuelerLernabschnittsdaten'
+          '     , Schueler Schueler'
+          '     , SchuelerAbiFaecher SchuelerAbiFaecher'
+          'WHERE (Kurse.Jahr = EigeneSchule.Schuljahr) AND '
+          '      (SchuelerLeistungsdaten.Kurs_ID = Kurse.ID)'
+          '       AND '
+          
+            '      (SchuelerLernabschnittsdaten.ID = SchuelerLeistungsdaten.A' +
+            'bschnitt_ID)'
+          '       AND '
+          '      (Schueler.ID = SchuelerLernabschnittsdaten.Schueler_ID)'
+          '       AND '
+          '      (SchuelerAbiFaecher.Schueler_ID = Schueler.ID)'
+          '       AND (( Kurse.ASDJahrgang = '#39'Q2'#39' )'
+          '       AND ( Kurse.Abschnitt = 2 )'
+          '       AND ( Schueler.Status IN (2,6) )'
+          '       AND ( Kurse.KursartAllg <> '#39'ZK'#39' )'
+          '       AND ( SchuelerLeistungsdaten.Kursart <> '#39'GKM'#39' )'
+          
+            '       AND (( SchuelerLeistungsdaten.Kursart = '#39'LK1'#39') OR ( Schue' +
+            'lerLeistungsdaten.Kursart = '#39'LK2'#39') OR ( SchuelerLeistungsdaten.K' +
+            'ursart = '#39'AB3'#39'))'
+          '       AND ( SchuelerLeistungsdaten.Kursart <> '#39'ZUV'#39' )'
+          
+            '       AND ( SchuelerAbiFaecher.AbiFach = SchuelerLeistungsdaten' +
+            '.AbiFach )'
+          '      )'
+          'ORDER BY Kurse.KursartAllg DESC, '
+          '         Kurse.KurzBez, Schueler.Name, '
+          '         Schueler.Vorname')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Bezeichnung1'
+          DisplayWidth = 50
+          FieldAlias = 'Bezeichnung1'
+          FieldLength = 50
+          FieldName = 'Bezeichnung1'
+          SQLFieldName = 'Bezeichnung1'
+        end
+        object daField2: TdaField
+          Alias = 'Bezeichnung2'
+          DisplayWidth = 50
+          FieldAlias = 'Bezeichnung2'
+          FieldLength = 50
+          FieldName = 'Bezeichnung2'
+          SQLFieldName = 'Bezeichnung2'
+        end
+        object daField3: TdaField
+          Alias = 'Bezeichnung3'
+          DisplayWidth = 50
+          FieldAlias = 'Bezeichnung3'
+          FieldLength = 50
+          FieldName = 'Bezeichnung3'
+          SQLFieldName = 'Bezeichnung3'
+        end
+        object daField4: TdaField
+          Alias = 'Strasse'
+          DisplayWidth = 50
+          FieldAlias = 'Strasse'
+          FieldLength = 50
+          FieldName = 'Strasse'
+          SQLFieldName = 'Strasse'
+        end
+        object daField5: TdaField
+          Alias = 'PLZ'
+          DisplayWidth = 10
+          FieldAlias = 'PLZ'
+          FieldLength = 10
+          FieldName = 'PLZ'
+          SQLFieldName = 'PLZ'
+        end
+        object daField6: TdaField
+          Alias = 'Ort'
+          DisplayWidth = 50
+          FieldAlias = 'Ort'
+          FieldLength = 50
+          FieldName = 'Ort'
+          SQLFieldName = 'Ort'
+        end
+        object daField7: TdaField
+          Alias = 'ID'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'ID'
+          FieldLength = 0
+          FieldName = 'ID'
+          SQLFieldName = 'ID'
+        end
+        object daField8: TdaField
+          Alias = 'KurzBez'
+          DisplayWidth = 20
+          FieldAlias = 'KurzBez'
+          FieldLength = 20
+          FieldName = 'KurzBez'
+          SQLFieldName = 'KurzBez'
+        end
+        object daField9: TdaField
+          Alias = 'ASDJahrgang'
+          DisplayWidth = 2
+          FieldAlias = 'ASDJahrgang'
+          FieldLength = 2
+          FieldName = 'ASDJahrgang'
+          SQLFieldName = 'ASDJahrgang'
+        end
+        object daField10: TdaField
+          Alias = 'KursartAllg'
+          DisplayWidth = 5
+          FieldAlias = 'KursartAllg'
+          FieldLength = 5
+          FieldName = 'KursartAllg'
+          SQLFieldName = 'KursartAllg'
+        end
+        object daField11: TdaField
+          Alias = 'LehrerKrz'
+          DisplayWidth = 10
+          FieldAlias = 'LehrerKrz'
+          FieldLength = 10
+          FieldName = 'LehrerKrz'
+          SQLFieldName = 'LehrerKrz'
+        end
+        object daField12: TdaField
+          Alias = 'Sortierung'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Sortierung'
+          FieldLength = 0
+          FieldName = 'Sortierung'
+          SQLFieldName = 'Sortierung'
+        end
+        object daField13: TdaField
+          Alias = 'Abschnitt'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Abschnitt'
+          FieldLength = 0
+          FieldName = 'Abschnitt'
+          SQLFieldName = 'Abschnitt'
+        end
+        object daField14: TdaField
+          Alias = 'Kursart'
+          DisplayWidth = 5
+          FieldAlias = 'Kursart'
+          FieldLength = 5
+          FieldName = 'Kursart'
+          SQLFieldName = 'Kursart'
+        end
+        object daField15: TdaField
+          Alias = 'AbiFach'
+          DisplayWidth = 1
+          FieldAlias = 'AbiFach'
+          FieldLength = 1
+          FieldName = 'AbiFach'
+          SQLFieldName = 'AbiFach'
+        end
+        object daField16: TdaField
+          Alias = 'Schueler_ID'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Schueler_ID'
+          FieldLength = 0
+          FieldName = 'Schueler_ID'
+          SQLFieldName = 'Schueler_ID'
+        end
+        object daField17: TdaField
+          Alias = 'Name'
+          DisplayWidth = 50
+          FieldAlias = 'Name'
+          FieldLength = 50
+          FieldName = 'Name'
+          SQLFieldName = 'Name'
+        end
+        object daField18: TdaField
+          Alias = 'Vorname'
+          DisplayWidth = 30
+          FieldAlias = 'Vorname'
+          FieldLength = 30
+          FieldName = 'Vorname'
+          SQLFieldName = 'Vorname'
+        end
+        object daField19: TdaField
+          Alias = 'FachKrz'
+          DisplayWidth = 20
+          FieldAlias = 'FachKrz'
+          FieldLength = 20
+          FieldName = 'FachKrz'
+          SQLFieldName = 'FachKrz'
+        end
+        object daField20: TdaField
+          Alias = 'AbiFach_2'
+          DisplayWidth = 1
+          FieldAlias = 'AbiFach_2'
+          FieldLength = 1
+          FieldName = 'AbiFach_2'
+          SQLFieldName = 'AbiFach_2'
+        end
+        object daField21: TdaField
+          Alias = 'AbiPruefErgebnis'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'AbiPruefErgebnis'
+          FieldLength = 0
+          FieldName = 'AbiPruefErgebnis'
+          SQLFieldName = 'AbiPruefErgebnis'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365064070726F6365647572652056
+      61726961626C65733B0D0A7661720D0A2020206175737761686C203A20737472
+      696E673B0D0A626567696E0D0A0D0A656E643B0D0A084361726574506F730102
+      000200000001060A54726150726F6772616D094368696C645479706502150E49
+      7346756E6374696F6E54797065090B50726F6772616D4E616D65060C50756E6B
+      7465546F4E6F74650B50726F6772616D54797065070A747446756E6374696F6E
+      06536F757263650C1802000066756E6374696F6E2050756E6B7465546F4E6F74
+      652870706B743A496E7465676572293A20537472696E673B0D0A626567696E0D
+      0A0D0A202020202020636173652070706B74206F660D0A202020202020313520
+      3A20526573756C74203A3D2027312B273B0D0A2020202020203134203A205265
+      73756C74203A3D202731273B0D0A2020202020203133203A20526573756C7420
+      3A3D2027312D273B0D0A2020202020203132203A20526573756C74203A3D2027
+      322B273B0D0A2020202020203131203A20526573756C74203A3D202732273B0D
+      0A2020202020203130203A20526573756C74203A3D2027322D273B0D0A202020
+      2020202039203A20526573756C74203A3D2027332B273B0D0A20202020202020
+      38203A20526573756C74203A3D202733273B0D0A2020202020202037203A2052
+      6573756C74203A3D2027332D273B0D0A2020202020202036203A20526573756C
+      74203A3D2027342B273B0D0A2020202020202035203A20526573756C74203A3D
+      202734273B0D0A2020202020202034203A20526573756C74203A3D2027342D27
+      3B0D0A2020202020202033203A20526573756C74203A3D2027352B273B0D0A20
+      20202020202032203A20526573756C74203A3D202735273B0D0A202020202020
+      2031203A20526573756C74203A3D2027352D273B0D0A2020202020202030203A
+      20526573756C74203A3D202736273B0D0A202020202020656E643B0D0A656E64
+      3B200D0A084361726574506F730102000200000001060F5472614576656E7448
+      616E646C65720B50726F6772616D4E616D650610444254657874374F6E476574
+      546578740B50726F6772616D54797065070B747450726F63656475726506536F
+      757263650C9703000070726F63656475726520444254657874374F6E47657454
+      6578742876617220546578743A20537472696E67293B0D0A626567696E0D0A20
+      20206966206175737761686C3D276E270D0A202020207468656E0D0A20202020
+      20626567696E0D0A20202020202020696620746578743D27270D0A2020202020
+      202020207468656E20746578743A3D276665686C74270D0A2020202020202020
+      20656C7365207B54657874203A3D2050756E6B7465546F4E6F7465284B757273
+      507275656665726765626E6973416269666165636865725B2741626950727565
+      6645726765626E6973275D293B7D0D0A20202020202020202020626567696E0D
+      0A20202020202020696620746578743D27313527207468656E20746578743A3D
+      27312B273B0D0A20202020202020696620746578743D27313427207468656E20
+      746578743A3D273120273B0D0A20202020202020696620746578743D27313327
+      207468656E20746578743A3D27312D273B0D0A20202020202020696620746578
+      743D27313227207468656E20746578743A3D27322B273B0D0A20202020202020
+      696620746578743D27313127207468656E20746578743A3D273220273B0D0A20
+      202020202020696620746578743D27313027207468656E20746578743A3D2732
+      2D273B0D0A20202020202020696620746578743D20273927207468656E207465
+      78743A3D27332B273B0D0A20202020202020696620746578743D202738272074
+      68656E20746578743A3D273320273B0D0A20202020202020696620746578743D
+      20273727207468656E20746578743A3D27332D273B0D0A202020202020206966
+      20746578743D20273627207468656E20746578743A3D27342B273B0D0A202020
+      20202020696620746578743D20273527207468656E20746578743A3D27342027
+      3B0D0A20202020202020696620746578743D20273427207468656E2074657874
+      3A3D27342D273B0D0A20202020202020696620746578743D2027332720746865
+      6E20746578743A3D27352B273B0D0A20202020202020696620746578743D2027
+      3227207468656E20746578743A3D273520273B0D0A2020202020202069662074
+      6578743D20273127207468656E20746578743A3D27352D273B0D0A2020202020
+      2020696620746578743D20273027207468656E20746578743A3D273620273B0D
+      0A2020202020656E643B0D0A20202020656E643B200D0A202069662074657874
+      3D202727207468656E20746578743A3D276665686C74273B0D0A656E643B0D0A
+      0D436F6D706F6E656E744E616D65060744425465787437094576656E744E616D
+      6506094F6E47657454657874074576656E7449440235084361726574506F7301
+      02000200000001060F5472614576656E7448616E646C65720B50726F6772616D
+      4E616D6506165265706F72744F6E53746172744669727374506173730B50726F
+      6772616D54797065070B747450726F63656475726506536F75726365067E7072
+      6F636564757265205265706F72744F6E53746172744669727374506173733B0D
+      0A626567696E0D0A20206175737761686C3A3D2053656C65637466726F6D4C69
+      7374282741757367616265206D6974204E6F74656E206F6465722050756E6B74
+      656E3A206E2C70272C276E2C70272C276E27293B0D0A656E643B0D0A0D436F6D
+      706F6E656E744E616D6506065265706F7274094576656E744E616D6506104F6E
+      5374617274466972737450617373074576656E7449440214084361726574506F
+      730102030203000001060F5472614576656E7448616E646C65720B50726F6772
+      616D4E616D65060F4C6162656C354F6E476574546578740B50726F6772616D54
+      797065070B747450726F63656475726506536F75726365067A70726F63656475
+      7265204C6162656C354F6E476574546578742876617220546578743A20537472
+      696E67293B0D0A626567696E0D0A0D0A20206966206175737761686C3D276E27
+      207468656E2054657874203A3D20274E6F74652720656C736520746578743A3D
+      2750756E6B7465273B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D
+      6506064C6162656C35094576656E744E616D6506094F6E476574546578740745
+      76656E7449440235084361726574506F730102000200000001060F5472614576
+      656E7448616E646C65720B50726F6772616D4E616D650610444254657874324F
+      6E476574546578740B50726F6772616D54797065070B747450726F6365647572
+      6506536F75726365066570726F63656475726520444254657874324F6E476574
+      546578742876617220546578743A20537472696E67293B0D0A626567696E0D0A
+      0D0A202049662074657874203D272D2D27207468656E2054657874203A3D2747
+      694C273B200D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65060744
+      425465787432094576656E744E616D6506094F6E47657454657874074576656E
+      7449440235084361726574506F730102000200000001060F5472614576656E74
+      48616E646C65720B50726F6772616D4E616D65061144425465787433324F6E47
+      6574546578740B50726F6772616D54797065070B747450726F63656475726506
+      536F7572636514B100000070726F6365647572652044425465787433324F6E47
+      6574546578742876617220546578743A20537472696E67293B0D0A626567696E
+      0D0A0D0A20202054657874203A3D20274162697475727072C3BC66756E672027
+      202B20496E74546F53747228456967656E65536368756C655B27536368756C6A
+      616872275D202B2031292B202720204A61687267616E6720272B53636875656C
+      65725B274153444A61687267616E67275D3B0D0A0D0A656E643B0D0A0D436F6D
+      706F6E656E744E616D6506084442546578743332094576656E744E616D650609
+      4F6E47657454657874074576656E7449440235084361726574506F7301020002
+      00000000}
+  end
+  object ppDesignLayers1: TppDesignLayers
+    object ppDesignLayer1: TppDesignLayer
+      UserName = 'Foreground'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object ppArchivierung: TppParameter
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = 'Schildvorgabe'
+      DataType = dtString
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = 'Schildvorgabe'
+      UserName = 'Archivierung'
+    end
+  end
+end

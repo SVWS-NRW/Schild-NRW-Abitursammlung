@@ -1,0 +1,355 @@
+object Report: TppReport
+  OnFileDeviceCreate = ReportFileDeviceCreate
+  AutoStop = False
+  DataPipeline = dmPipelines.Schueler
+  OnStartFirstPass = ReportStartFirstPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 
+    'GymOb_Anl18_JgQ2_B_Nichtzulassung-Nichtbestehen_Entlassung_Elter' +
+    'n.rtm'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 15000
+  PrinterSetup.mmMarginLeft = 0
+  PrinterSetup.mmMarginRight = 0
+  PrinterSetup.mmMarginTop = 15000
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.FileName = 
+    'C:\Schulverwaltung\SchILD-NRW\SchILD-Reports\Abitur_2014_Calibri' +
+    '\APO-GOSt B\ZAA\ZAA2\Anschreiben_nicht_bestanden\GymOb_Anl18_JgQ' +
+    '2_B_Nichtzulassung-Nichtbestehen_Entlassung_Eltern.rtm'
+  Template.Format = ftASCII
+  Units = utScreenPixels
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  ArchiveFileName = '($MyDocuments)\ReportArchive.raf'
+  BeforeOpenDataPipelines = ReportBeforeOpenDataPipelines
+  BeforePrint = ReportBeforePrint
+  BeforeEmail = ReportBeforeEmail
+  DeviceType = 'Screen'
+  DefaultFileDeviceType = 'PDF'
+  EmailSettings.ReportFormat = 'PDF'
+  EmailSettings.Enabled = True
+  LanguageID = 'Default'
+  OnInitializeParameters = ReportInitializeParameters
+  OnPreviewFormCreate = ReportPreviewFormCreate
+  OpenFile = False
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = False
+  OutlineSettings.Visible = False
+  ThumbnailSettings.Enabled = True
+  ThumbnailSettings.Visible = True
+  ThumbnailSettings.DeadSpace = 30
+  PDFSettings.EmbedFontOptions = [efUseSubset]
+  PDFSettings.EncryptSettings.AllowCopy = True
+  PDFSettings.EncryptSettings.AllowInteract = True
+  PDFSettings.EncryptSettings.AllowModify = True
+  PDFSettings.EncryptSettings.AllowPrint = True
+  PDFSettings.EncryptSettings.Enabled = False
+  PDFSettings.EncryptSettings.KeyLength = kl40Bit
+  PDFSettings.FontEncoding = feAnsi
+  PDFSettings.ImageCompressionLevel = 25
+  PreviewFormSettings.ZoomSetting = zs100Percent
+  PreviewFormSettings.SinglePageOnly = True
+  RTFSettings.DefaultFont.Charset = DEFAULT_CHARSET
+  RTFSettings.DefaultFont.Color = clWindowText
+  RTFSettings.DefaultFont.Height = -13
+  RTFSettings.DefaultFont.Name = 'Arial'
+  RTFSettings.DefaultFont.Style = []
+  TextFileName = '($MyDocuments)\Report.pdf'
+  TextSearchSettings.DefaultString = '<Suchtext>'
+  TextSearchSettings.Enabled = False
+  XLSSettings.AppName = 'ReportBuilder'
+  XLSSettings.Author = 'ReportBuilder'
+  XLSSettings.Subject = 'Report'
+  XLSSettings.Title = 'Report'
+  Left = 128
+  Top = 8
+  Version = '15.03'
+  mmColumnWidth = 0
+  DataPipelineName = 'Schueler'
+  object ppDetailBand2: TppDetailBand
+    Background1.Brush.Style = bsClear
+    Background2.Brush.Style = bsClear
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 297128
+    mmPrintPosition = 0
+    object ppRichText2: TppRichText
+      UserName = 'RiTe_Mitteilung'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Calibri'
+      Font.Size = 11
+      Font.Style = []
+      Caption = 'RiTe_Mitteilung'
+      MailMerge = True
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fnil Cali' +
+        'bri;}{\f1\fnil\fcharset0 Calibri;}}'#13#10'{\colortbl ;\red0\green0\bl' +
+        'ue0;}'#13#10'\viewkind4\uc1\pard\cf1\f0\fs22 $Anrede$\par'#13#10'\par'#13#10'\f1 w' +
+        'ir bedauern, Ihnen mitteilen zu m\'#39'fcssen, dass $satz1$\f0\par'#13#10 +
+        '\par'#13#10'$satz2$\par'#13#10'\par'#13#10'\par'#13#10'\par'#13#10'\b\f1 Rechtsbehelfsbelehrun' +
+        'g:\b0  Gegen die Entscheidung des Zentralen Abiturausschusses \'#39 +
+        'fcber $grund$ und die Entlassung aus der gymnasialen Oberstufe k' +
+        'ann innerhalb eines Monats nach der Zustellung dieses Bescheides' +
+        ' Widerspruch erhoben werden. Der Widerspruch ist bei der Schule ' +
+        '($schule$) schriftlich einzureichen oder zur Niederschrift zu ge' +
+        'ben.\f0\par'#13#10'\par'#13#10'\par'#13#10'\f1 Mit freundlichem Gru\'#39'df\f0\par'#13#10'\p' +
+        'ar'#13#10'\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      Stretch = True
+      mmHeight = 79372
+      mmLeft = 15081
+      mmTop = 115237
+      mmWidth = 179917
+      BandType = 4
+      LayerName = BandLayer2
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      mmLeftMargin = 794
+    end
+    object ppLabel5: TppLabel
+      UserName = 'La_VorsitzZPA'
+      Caption = 'La_VorsitzZPA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Calibri'
+      Font.Size = 11
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4784
+      mmLeft = 15081
+      mmTop = 204376
+      mmWidth = 21886
+      BandType = 4
+      LayerName = BandLayer2
+    end
+    object ppRichText1: TppRichText
+      UserName = 'RiTe_Entlassung'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Calibri'
+      Font.Size = 11
+      Font.Style = [fsBold]
+      Caption = 'RiTe_Entlassung'
+      RichText = 
+        '{\rtf1\ansi\ansicpg1252\deff0\deflang1031{\fonttbl{\f0\fnil Cali' +
+        'bri;}{\f1\fnil\fcharset0 Calibri;}}'#13#10'{\colortbl ;\red0\green0\bl' +
+        'ue0;}'#13#10'\viewkind4\uc1\pard\cf1\b\f0\fs22 $Nichtbestehen$\par'#13#10'\f' +
+        '1 und Entlassung aus der gymnasialen Oberstufe gem\'#39'e4\'#39'df der V' +
+        'erordnung \'#39'fcber den Bildungsgang und die Abiturpr\'#39'fcfung in d' +
+        'er gymnasialen Oberstufe (APO-GOSt)\f0\par'#13#10'}'#13#10#0
+      RemoveEmptyLines = False
+      mmHeight = 19844
+      mmLeft = 15081
+      mmTop = 90895
+      mmWidth = 179917
+      BandType = 4
+      LayerName = BandLayer2
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      mmLeftMargin = 794
+    end
+    object myDynamicLoadingSubReport1: TmyDynamicLoadingSubReport
+      UserName = 'DynamicLoadingSubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      Filename = 'Brief_Kopf_Eltern.rtm'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 4236
+      mmWidth = 210000
+      BandType = 4
+      LayerName = BandLayer2
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmMinHeight = 0
+      object ppChildReport1: TppChildReport
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 
+          'GymOb_Anl18_JgQ2_B_Nichtzulassung-Nichtbestehen_Entlassung_Elter' +
+          'n.rtm'
+        PrinterSetup.PaperName = 'A4'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.SaveDeviceSettings = False
+        PrinterSetup.mmMarginBottom = 15000
+        PrinterSetup.mmMarginLeft = 0
+        PrinterSetup.mmMarginRight = 0
+        PrinterSetup.mmMarginTop = 15000
+        PrinterSetup.mmPaperHeight = 297000
+        PrinterSetup.mmPaperWidth = 210000
+        PrinterSetup.PaperSize = 9
+        Units = utMillimeters
+        Version = '15.03'
+        mmColumnWidth = 0
+        object ppDesignLayers1: TppDesignLayers
+          object ppDesignLayer1: TppDesignLayer
+            UserName = 'Foreground'
+            LayerType = ltBanded
+            Index = 0
+          end
+        end
+      end
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'VornameName'
+    DataPipeline = dmPipelines.Schueler
+    GroupFileSettings.NewFile = False
+    GroupFileSettings.EmailFile = False
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Schueler'
+    NewFile = False
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      Background.Brush.Style = bsClear
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      Background.Brush.Style = bsClear
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F547261436F6E737450726F6772616D094368696C645479706502120B50
+      726F6772616D4E616D650609436F6E7374616E74730B50726F6772616D547970
+      65070B747450726F63656475726506536F75726365065770726F636564757265
+      20436F6E7374616E74733B0D0A636F6E73740D0A20202020526570566572733D
+      275265706F727456657273696F6E3A2042412E30352E3031273B200D0A0D0A62
+      6567696E0D0A0D0A656E643B0D0A084361726574506F73010200020000000106
+      0D54726156617250726F6772616D094368696C645479706502110B50726F6772
+      616D4E616D6506095661726961626C65730B50726F6772616D54797065070B74
+      7450726F63656475726506536F75726365069570726F63656475726520566172
+      6961626C65733B0D0A7661720D0A20207361766554657874312C207361766554
+      657874323A20737472696E673B0D0A2020736368756C6C65697465723A207374
+      72696E673B0D0A20206E62203A737472696E673B0D0A2020616E726564652C73
+      312C2073322C672C7363683A737472696E673B0D0A0D0A0D0A626567696E0D0A
+      0D0A656E643B0D0A084361726574506F730102000200000001060F5472614576
+      656E7448616E646C65720B50726F6772616D4E616D65061144657461696C4265
+      666F72655072696E740B50726F6772616D54797065070B747450726F63656475
+      726506536F75726365140606000070726F6365647572652044657461696C4265
+      666F72655072696E743B0D0A626567696E0D0A0D0A20206E62203A3D2053656C
+      65637446726F6D4C6973742827576965646572686F6C756E64737072C3BC6675
+      6E67272C20274E696368747A756C617373756E67207A75722057696564657268
+      6F6C756E67737072C3BC66756E672C4E69636874626573746568656E20646572
+      20576965646572686F6C756E67737072C3BC66756E67272C20274E696368747A
+      756C617373756E67207A757220576965646572686F6C756E67737072C3BC6675
+      6E6727293B0D0A2020526954655F456E746C617373756E672E52696368546578
+      74203A3D205265706C61636554657874287361766554657874312C2027244E69
+      636874626573746568656E24272C206E62293B0D0A0D0A09616E72656465203A
+      3D2045727A69656865725B27466F726D616C65416E72656465275D3B0D0A0969
+      662053636875656C65725B2747657363686C65636874275D203D20330D0A0974
+      68656E207331203A3D202749687220536F686E20270D0A09656C736520733120
+      3A3D20274968726520546F636874657220273B0D0A20207331203A3D20733120
+      2B2053636875656C65725B27566F726E616D65275D202B202720273B0D0A0969
+      6620286E62203D20274E696368747A756C617373756E67207A75722057696564
+      6572686F6C756E67737072C3BC66756E6727290D0A20207468656E207331203A
+      3D207331202B20276E6163682064656D20576965646572686F6C756E67736A61
+      6872206E69636874207A75722041627475727072C3BC66756E67207A7567656C
+      617373656E2077757264652E270D0A2020656C7365207331203A3D207331202B
+      2027646965204162697475727072C3BC66756E67206175636820696D20576965
+      646572686F6C756E67736A616872206E696368742062657374616E64656E2068
+      61742E273B0D0A0D0A0969662053636875656C65725B2747657363686C656368
+      74275D203D20330D0A097468656E207332203A3D202749687220536F686E2027
+      0D0A09656C7365207332203A3D20274968726520546F636874657220273B0D0A
+      20207332203A3D207332202B20277665726CC3A47373742067656DC3A4C39F20
+      C2A732204162732E312041504F2D474F5374206469652067796D6E617369616C
+      65204F62657273747566652E273B0D0A2020696620286E62203D20274E696368
+      747A756C617373756E67207A757220576965646572686F6C756E67737072C3BC
+      66756E6727290D0A20207468656E2067203A3D20276469652027202B206E620D
+      0A2020656C73652067203A3D20276461732027202B206E623B0D0A0909202020
+      20200D0A09736368203A3D20456967656E65536368756C655B2742657A656963
+      686E756E6731275D202B20272C2027202B20456967656E65536368756C655B27
+      53747261737365275D202B20272C2027200D0A2020202020202020202B204569
+      67656E65536368756C655B27504C5A275D202B20272027202B20456967656E65
+      536368756C655B274F7274275D3B0D0A200D0A09526954655F4D69747465696C
+      756E672E5269636854657874203A3D205265706C616365546578742873617665
+      54657874322C202724416E7265646524272C20616E72656465293B0D0A095269
+      54655F4D69747465696C756E672E5269636854657874203A3D205265706C6163
+      655465787428526954655F4D69747465696C756E672E52696368546578742C20
+      27247361747A3124272C207331293B0D0A09526954655F4D69747465696C756E
+      672E5269636854657874203A3D205265706C6163655465787428526954655F4D
+      69747465696C756E672E52696368546578742C2027247361747A3224272C2073
+      32293B0D0A09526954655F4D69747465696C756E672E5269636854657874203A
+      3D205265706C6163655465787428526954655F4D69747465696C756E672E5269
+      6368546578742C202724736368756C6524272C20736368293B0D0A0952695465
+      5F4D69747465696C756E672E5269636854657874203A3D205265706C61636554
+      65787428526954655F4D69747465696C756E672E52696368546578742C202724
+      6772756E6424272C2067293B0D0A656E643B0D0A0D436F6D706F6E656E744E61
+      6D65060644657461696C094576656E744E616D65060B4265666F72655072696E
+      74074576656E7449440218084361726574506F730102010207000001060F5472
+      614576656E7448616E646C65720B50726F6772616D4E616D6506105265706F72
+      7441667465725072696E740B50726F6772616D54797065070B747450726F6365
+      6475726506536F75726365067E70726F636564757265205265706F7274416674
+      65725072696E743B0D0A626567696E0D0A2020526954655F4D69747465696C75
+      6E672E5269636854657874203A3D207361766554657874323B0D0A2020526954
+      655F456E746C617373756E672E5269636854657874203A3D2073617665546578
+      74313B0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506065265706F72
+      74094576656E744E616D65060A41667465725072696E74074576656E74494402
+      00084361726574506F730102000200000001060F5472614576656E7448616E64
+      6C65720B50726F6772616D4E616D6506115265706F72744265666F7265507269
+      6E740B50726F6772616D54797065070B747450726F63656475726506536F7572
+      6365067F70726F636564757265205265706F72744265666F72655072696E743B
+      0D0A626567696E0D0A2020736176655465787431203A3D20526954655F456E74
+      6C617373756E672E52696368546578743B0D0A2020736176655465787432203A
+      3D20526954655F4D69747465696C756E672E52696368546578743B0D0A656E64
+      3B0D0A0D436F6D706F6E656E744E616D6506065265706F7274094576656E744E
+      616D65060B4265666F72655072696E74074576656E7449440201084361726574
+      506F730102000200000001060F5472614576656E7448616E646C65720B50726F
+      6772616D4E616D6506164C615F566F727369747A5A50414F6E47657454657874
+      0B50726F6772616D54797065070B747450726F63656475726506536F75726365
+      14FA00000070726F636564757265204C615F566F727369747A5A50414F6E4765
+      74546578742876617220546578743A20537472696E67293B0D0A626567696E0D
+      0A2020696620456967656E65536368756C655B27536368756C6C656974657247
+      657363686C65636874275D203D20340D0A20207468656E2054657874203A3D20
+      2728566F727369747A656E646520646573205A656E7472616C656E205072C3BC
+      66756E6773617573736368757373657329270D0A2020656C7365205465787420
+      3A3D202728566F727369747A656E64657220646573205A656E7472616C656E20
+      5072C3BC66756E6773617573736368757373657329273B0D0A656E643B0D0A0D
+      436F6D706F6E656E744E616D65060D4C615F566F727369747A5A504109457665
+      6E744E616D6506094F6E47657454657874074576656E74494402350843617265
+      74506F730102000200000000}
+  end
+  object ppDesignLayers3: TppDesignLayers
+    object ppDesignLayer3: TppDesignLayer
+      UserName = 'BandLayer2'
+      LayerType = ltBanded
+      Index = 0
+    end
+  end
+  object ppParameterList2: TppParameterList
+    object ppArchivierung: TppParameter
+      AutoSearchSettings.LogicalPrefix = []
+      AutoSearchSettings.Mandatory = True
+      AutoSearchSettings.SearchExpression = 'Schildvorgabe'
+      DataType = dtString
+      LookupSettings.DisplayType = dtNameOnly
+      LookupSettings.SortOrder = soName
+      Value = 'Schildvorgabe'
+      UserName = 'Archivierung'
+    end
+  end
+end
